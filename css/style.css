@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: grey; }
+
+body {
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2rem 6rem rgba(25, 50, 81, 0.203238);
+  min-height: 100vh; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
