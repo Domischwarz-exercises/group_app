@@ -1,97 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
 
-		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
-		<title>Journal Detail</title>
-		<style>
-			.journal{
-				display: grid;
-				grid-template-columns: repeat(10, 10vw);
-				grid-template-rows: repeat(10, 10vh);
-				align-items: center;
-				justify-content: center;
-			}
+    <title>Journal Detail</title>
+    <style>
+      .journal {
+        display: grid;
+        grid-template-columns: repeat(10, 10vw);
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+      }
 
-			.journal__date{
-				grid-column: span 10;
-				grid-row: span 1;
-			}
+      .journal__date {
+        grid-column: span 10;
+        grid-row: span 1;
+      }
 
-			h3{
-				grid-column: span 2;
-				grid-row: span 1;
-			}
+      .journal__stars {
+        grid-column: span 10;
+        grid-row: span 1;
+      }
 
-			.journal__stars{
-				grid-column: span 10;
-				grid-row: span 1;
-			}
+      h4 {
+        grid-column: span 10;
+        grid-row: span 1;
+      }
 
-			h4{
-				grid-column: span 2;
-				grid-row: span 1;
-			}
+      .card__rectangles {
+        grid-column: span 10;
+        grid-row: span 1;
+      }
 
-			.card__rectangles{
-				grid-column: span 10;
-				grid-row: span 1;
-			}
+      .journal__mottotext {
+        grid-column: span 10;
+        grid-row: span 1;
+      }
 
-			.journal__mottotext{
-				grid-column: span 10;
-				grid-row: span 1;
-			}
+      .journal__notestext {
+        grid-column: span 10;
+        grid-row: span 1;
+      }
 
-			.journal__notestext{
-				grid-column: span 10;
-				grid-row: span 1;
-			}
-			
-		</style>
-		
-	</head>
-	<body>
-		<div class="container">
-		
-			  <div class="journal">
-				<h3 class="journal__date">TODAY, 12.07.2020</h3>
-				<h4>Rating:</h4>
-				<div class="journal__stars">
-				  <img class="journal__star" src="img/starGrey.png" alt="Black star" />
-				  <img class="journal__star" src="img/starGrey.png" alt="Black star" />
-				  <img class="journal__star" src="img/starGrey.png" alt="Black star" />
-				  <img class="journal__star" src="img/starGrey.png" alt="" />
-				  <img class="journal__star" src="img/starGrey.png" alt="" />
-				  <h4>Comprehension:</h4>
-				  <div class="card__rectangles">
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-					<img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
-				  </div>
-				  <h4>Motto:</h4>
-				  <textarea class="journal__mottotext" name="" id="" cols="30" rows="10"></textarea>
-				  <h4>Notes:</h4>
-				  <textarea class="journal__notestext" name="" id="" cols="30" rows="10"></textarea>
-				
-				
-				<button class="btn__transparent--small">Cancel</button>
-				<button class="btn__orange--small">Save</button>
-			</div>
-		</div>
+      .btn__transparent--small {
+        grid-column: span 5;
+        grid-row: span 1;
+      }
 
+      .btn__orange {
+        grid-column: span 5;
+        grid-row: span 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="journal">
+        <h3 class="journal__date">TODAY, 12.07.2020</h3>
+        <h4>Rating:</h4>
+        <div class="journal__stars">
+          <img class="journal__star" src="img/starGrey.png" alt="Black star" />
+          <img class="journal__star" src="img/starGrey.png" alt="Black star" />
+          <img class="journal__star" src="img/starGrey.png" alt="Black star" />
+          <img class="journal__star" src="img/starGrey.png" alt="" />
+          <img class="journal__star" src="img/starGrey.png" alt="" />
+        </div>
+        <h4>Comprehension:</h4>
+        <div class="card__rectangles">
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+          <img class="journal__rectangle" src="img/rectangleGrey.png" alt="" />
+        </div>
+        <h4>Motto:</h4>
+        <textarea
+          class="journal__mottotext"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+        <h4>Notes:</h4>
+        <textarea
+          class="journal__notestext"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
 
-	</body>
+        <button class="btn__transparent--small">Cancel</button>
+        <button class="btn__orange--small">Save</button>
+      </div>
+    </div>
+  </body>
 </html>
