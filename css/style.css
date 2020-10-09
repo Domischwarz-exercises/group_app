@@ -141,22 +141,17 @@ span {
     stroke: none;
     fill: #f8f8f8; }
 
-.container__test {
-  padding: 10vw;
-  background-color: white; }
-
 .card {
   width: 315px;
   height: auto;
   padding: 20px;
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(10, 3.5em);
+  grid-template-columns: repeat(10, auto);
   grid-template-rows: auto;
   justify-items: left;
   align-items: center;
-  box-shadow: 0px 0.2rem 1.1rem rgba(25, 50, 81, 0.203238);
-  border: 2px solid black; }
+  box-shadow: 0px 0.2rem 1.1rem rgba(25, 50, 81, 0.203238); }
   .card__date {
     grid-column: span 10;
     grid-row: span 1;
@@ -166,33 +161,26 @@ span {
   grid-column: span 10;
   grid-row: span 1; }
 
-.card .card__startitle {
-  grid-column: span 10;
-  grid-row: span 1;
+.card-title {
   color: #E0E4E8;
   font-size: 12px; }
 
 .card__starcontainer {
-  grid-column: span 10;
-  grid-row: span 1; }
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1/10; }
 
 .card__star--imgblue {
   width: 25px;
-  height: 24; }
+  height: 24px; }
 
 .card__star--imggrey {
   width: 25px;
-  height: 24; }
-
-.card__rectangletitle {
-  grid-column: span 10;
-  grid-row: span 1;
-  color: #e0e4e8;
-  font-size: 12px; }
+  height: 24px; }
 
 .card__rectanglecontainer {
-  grid-column: span 10;
-  grid-row: span 1; }
+  display: flex;
+  justify-content: space-around; }
 
 .card__rectangle--imgblue {
   width: 22px;
@@ -202,25 +190,9 @@ span {
   width: 22px;
   height: 22px; }
 
-.card__mottotitle {
-  grid-column: span 10;
-  grid-row: span 1;
-  color: #e0e4e8;
-  font-size: 12px; }
-
 .card__motto {
-  grid-column: span 10;
-  grid-row: span 1;
   font-size: 14px; }
 
-.card__notetitle {
-  grid-column: span 10;
-  grid-row: span 1;
-  color: #e0e4e8;
-  font-size: 12px; }
-
 .card__note {
-  grid-column: span 10;
-  grid-row: span 1;
   font-size: 14px;
   height: auto; }

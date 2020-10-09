@@ -1,20 +1,14 @@
-.container__test {
-  padding: 10vw;
-  background-color: white;
-}
-
 .card {
   width: 315px;
   height: auto;
   padding: 20px;
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(10, 3.5em);
+  grid-template-columns: repeat(10, auto);
   grid-template-rows: auto;
   justify-items: left;
   align-items: center;
   box-shadow: $shadow-grey;
-  border: 2px solid black;
 
   &__date {
     grid-column: span 10;
@@ -28,30 +22,33 @@
   grid-row: span 1;
 }
 
-.card .card__startitle {
+.card-title {
   color: $third-color;
   font-size: 12px;
 }
 
 .card__starcontainer {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1/10;
 }
 
 .card__star--imgblue {
   width: 25px;
-  height: 24;
+  height: 24px;
 }
 
 .card__star--imggrey {
   width: 25px;
-  height: 24;
+  height: 24px;
 }
 
 .card__rectangletitle {
-  color: #e0e4e8;
-  font-size: 12px;
 }
 
 .card__rectanglecontainer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .card__rectangle--imgblue {
@@ -65,8 +62,6 @@
 }
 
 .card__mottotitle {
-  color: #e0e4e8;
-  font-size: 12px;
 }
 
 .card__motto {
@@ -74,8 +69,6 @@
 }
 
 .card__notetitle {
-  color: #e0e4e8;
-  font-size: 12px;
 }
 
 .card__note {
