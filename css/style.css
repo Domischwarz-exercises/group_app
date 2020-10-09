@@ -34,7 +34,7 @@ body {
   background-color: white; }
 
 .card {
-  width: 400px;
+  width: 315px;
   height: auto;
   padding: 20px;
   background-color: white;
@@ -48,40 +48,64 @@ body {
 
 .card__date {
   grid-column: span 10;
-  grid-row: span 1; }
+  grid-row: span 1;
+  font-size: 14px; }
 
 .card__startitle {
   grid-column: span 10;
   grid-row: span 1;
-  color: #e0e4e8; }
+  color: #e0e4e8;
+  font-size: 12px; }
 
 .card__starcontainer {
   grid-column: span 10;
   grid-row: span 1; }
 
+.card__star--imgblue {
+  width: 25px;
+  height: 24; }
+
+.card__star--imggrey {
+  width: 25px;
+  height: 24; }
+
 .card__rectangletitle {
   grid-column: span 10;
   grid-row: span 1;
-  color: #e0e4e8; }
+  color: #e0e4e8;
+  font-size: 12px; }
 
 .card__rectanglecontainer {
   grid-column: span 10;
   grid-row: span 1; }
 
+.card__rectangle--imgblue {
+  width: 22px;
+  height: 22px; }
+
+.card__rectangle--imggrey {
+  width: 22px;
+  height: 22px; }
+
 .card__mottotitle {
   grid-column: span 10;
   grid-row: span 1;
-  color: #e0e4e8; }
+  color: #e0e4e8;
+  font-size: 12px; }
 
 .card__motto {
   grid-column: span 10;
-  grid-row: span 1; }
+  grid-row: span 1;
+  font-size: 14px; }
 
 .card__notetitle {
   grid-column: span 10;
   grid-row: span 1;
-  color: #e0e4e8; }
+  color: #e0e4e8;
+  font-size: 12px; }
 
 .card__note {
   grid-column: span 10;
-  grid-row: span 1; }
+  grid-row: span 1;
+  font-size: 14px;
+  height: auto; }
