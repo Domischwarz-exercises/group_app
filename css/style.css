@@ -17,10 +17,6 @@ body {
   font-weight: 400;
   line-height: 1.6; }
 
-h2 {
-  font-size: 100%;
-  font-family: 'Open-Sans', sans-serif; }
-
 .container {
   max-width: 37.5rem;
   margin: 8rem auto;
@@ -37,6 +33,11 @@ h2 {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1rem; }
+
+span {
+  font-size: 1.2rem;
+  color: #7589A2;
+  font-weight: 400; }
 
 .btn {
   display: flex;
@@ -91,3 +92,10 @@ h2 {
 .btn-blue {
   background-color: #193251;
   margin-right: 1rem; }
+
+.graph__container {
+  margin-left: 3rem;
+  width: 31.5rem;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr); }
