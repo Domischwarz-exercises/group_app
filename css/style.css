@@ -13,12 +13,12 @@ html {
   background-color: grey; }
 
 body {
-  font-family: 'Open-Sans', sans-serif;
+  font-family: "Open-Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6; }
 
 .container {
-  max-width: 37.5rem;
+  max-width: 90rem;
   margin: 8rem auto;
   background-color: #FFFFFF;
   box-shadow: 0px 2rem 6rem rgba(25, 50, 81, 0.203238);
@@ -99,3 +99,88 @@ span {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(5, 1fr); }
+
+.container__test {
+  padding: 10vw;
+  background-color: white; }
+
+.card {
+  width: 315px;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(10, 3.5em);
+  grid-template-rows: auto;
+  justify-items: left;
+  align-items: center;
+  box-shadow: 0px 2rem 6rem rgba(25, 50, 81, 0.203238);
+  border: 2px solid black; }
+  .card__date {
+    grid-column: span 10;
+    grid-row: span 1;
+    font-size: 14px; }
+
+.card-grid {
+  grid-column: span 10;
+  grid-row: span 1; }
+
+.card .card__startitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #E0E4E8;
+  font-size: 12px; }
+
+.card__starcontainer {
+  grid-column: span 10;
+  grid-row: span 1; }
+
+.card__star--imgblue {
+  width: 25px;
+  height: 24; }
+
+.card__star--imggrey {
+  width: 25px;
+  height: 24; }
+
+.card__rectangletitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #e0e4e8;
+  font-size: 12px; }
+
+.card__rectanglecontainer {
+  grid-column: span 10;
+  grid-row: span 1; }
+
+.card__rectangle--imgblue {
+  width: 22px;
+  height: 22px; }
+
+.card__rectangle--imggrey {
+  width: 22px;
+  height: 22px; }
+
+.card__mottotitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #e0e4e8;
+  font-size: 12px; }
+
+.card__motto {
+  grid-column: span 10;
+  grid-row: span 1;
+  font-size: 14px; }
+
+.card__notetitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #e0e4e8;
+  font-size: 12px; }
+
+.card__note {
+  grid-column: span 10;
+  grid-row: span 1;
+  font-size: 14px;
+  height: auto; }
+
