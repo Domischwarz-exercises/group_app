@@ -1,0 +1,30 @@
+.nav {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: $white;
+    box-shadow: $shadow-grey;
+    border-radius: 1rem;
+
+    position: absolute;
+    width: 335px;
+    height: 44px;
+    left: 20px;
+    bottom: 2rem;
+
+    /*&__image {
+        height: 6vh;
+    }*/
+    
+  /*& a{   
+   text-align: center;
+    
+   & img {
+       width: 50%;
+   }
+}*/
+
+    
+}

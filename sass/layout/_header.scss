@@ -1,0 +1,26 @@
+.waves {
+    //display: flex;
+
+    //position: relative;
+    text-align: center;
+    overflow: hidden;
+    //height: 10rem; 
+
+    &__heading {        
+        background-color: $light-grey;
+        //height: 3rem;
+        padding-top: 3rem;
+      
+    }
+    & svg {
+        height: 6rem; 
+        width: 100%;
+    }
+
+    & path {
+        stroke: none; 
+        fill: #f8f8f8;
+    }
+}
+
+
