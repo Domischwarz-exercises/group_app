@@ -28,9 +28,9 @@
 }
 
 .card__starcontainer {
+  list-style: none;
   display: flex;
   justify-content: space-between;
-  grid-column: 1/10;
 }
 
 .card__star--imgblue {
@@ -47,8 +47,6 @@
 }
 
 .card__rectanglecontainer {
-  display: flex;
-  justify-content: space-around;
 }
 
 .card__rectangle--imgblue {

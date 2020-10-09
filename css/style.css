@@ -166,9 +166,9 @@ span {
   font-size: 12px; }
 
 .card__starcontainer {
+  list-style: none;
   display: flex;
-  justify-content: space-between;
-  grid-column: 1/10; }
+  justify-content: space-between; }
 
 .card__star--imgblue {
   width: 25px;
@@ -177,10 +177,6 @@ span {
 .card__star--imggrey {
   width: 25px;
   height: 24px; }
-
-.card__rectanglecontainer {
-  display: flex;
-  justify-content: space-around; }
 
 .card__rectangle--imgblue {
   width: 22px;
