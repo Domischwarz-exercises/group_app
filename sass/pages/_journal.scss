@@ -29,15 +29,11 @@
 }
 
 .card .card__startitle {
-  grid-column: span 10;
-  grid-row: span 1;
   color: $third-color;
   font-size: 12px;
 }
 
 .card__starcontainer {
-  grid-column: span 10;
-  grid-row: span 1;
 }
 
 .card__star--imgblue {
@@ -51,15 +47,11 @@
 }
 
 .card__rectangletitle {
-  grid-column: span 10;
-  grid-row: span 1;
   color: #e0e4e8;
   font-size: 12px;
 }
 
 .card__rectanglecontainer {
-  grid-column: span 10;
-  grid-row: span 1;
 }
 
 .card__rectangle--imgblue {
@@ -73,28 +65,20 @@
 }
 
 .card__mottotitle {
-  grid-column: span 10;
-  grid-row: span 1;
   color: #e0e4e8;
   font-size: 12px;
 }
 
 .card__motto {
-  grid-column: span 10;
-  grid-row: span 1;
   font-size: 14px;
 }
 
 .card__notetitle {
-  grid-column: span 10;
-  grid-row: span 1;
   color: #e0e4e8;
   font-size: 12px;
 }
 
 .card__note {
-  grid-column: span 10;
-  grid-row: span 1;
   font-size: 14px;
   height: auto;
 }
