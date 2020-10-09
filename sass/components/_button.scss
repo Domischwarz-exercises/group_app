@@ -1,1 +1,53 @@
 
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 22.2rem;
+    
+    &__big {
+        width: 31.5rem;
+        font-size: $semibold16;
+        font-weight: 700;
+        margin-right: 3rem;
+        margin-left: 3rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        color: $white;
+        border-radius: 5px;
+        border: none;
+        border-style: none;
+    }
+
+    &__small {
+        height: 2rem;
+        border-radius: 4px;
+        border: none;
+        border-style: none;
+        padding: 1% 2%;
+        color: white;
+    }
+}
+
+.btn-orange {
+    background-color: $btn-primary-orange;
+}
+
+.btn-mediumorange {
+    background-color: $btn-secondary-orange;
+}
+
+.btn-lightorange {
+    background-color: $btn-third-orange;
+    color: $btn-primary-orange;
+}
+
+.btn-verylightorange {
+    background-color: $btn-fourth-orange;
+    color: $btn-primary-orange;
+}
+
+.btn-blue {
+    background-color: $primary-color;
+}

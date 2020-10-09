@@ -2,7 +2,7 @@
   "name": "group-app",
   "version": "1.0.0",
   "description": "group-app",
-  "main": "index.js",
+  "main": "*.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
