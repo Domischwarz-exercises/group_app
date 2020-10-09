@@ -1,18 +1,36 @@
+.container__test {
+  padding: 10vw;
+  background-color: white;
+}
+
 .card {
   width: 400px;
-  height: 800px;
-  display: grid;
+  height: auto;
   padding: 20px;
-  background-color: blue;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(10, 3.5em);
+  grid-template-rows: auto;
+  justify-items: left;
+  align-items: center;
+  box-shadow: 5px 5px grey;
+  border: 2px solid black;
 }
 
 .card__date {
+  grid-column: span 10;
+  grid-row: span 1;
 }
 
 .card__startitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #e0e4e8;
 }
 
 .card__starcontainer {
+  grid-column: span 10;
+  grid-row: span 1;
 }
 
 .card__star--imgblue {
@@ -22,9 +40,14 @@
 }
 
 .card__rectangletitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #e0e4e8;
 }
 
 .card__rectanglecontainer {
+  grid-column: span 10;
+  grid-row: span 1;
 }
 
 .card__rectangle--imgblue {
@@ -34,13 +57,23 @@
 }
 
 .card__mottotitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #e0e4e8;
 }
 
 .card__motto {
+  grid-column: span 10;
+  grid-row: span 1;
 }
 
 .card__notetitle {
+  grid-column: span 10;
+  grid-row: span 1;
+  color: #e0e4e8;
 }
 
 .card__note {
+  grid-column: span 10;
+  grid-row: span 1;
 }
