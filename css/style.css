@@ -43,18 +43,21 @@ body {
   grid-template-rows: auto;
   justify-items: left;
   align-items: center;
-  box-shadow: 5px 5px grey;
+  box-shadow: 0px 2rem 6rem rgba(25, 50, 81, 0.203238);
   border: 2px solid black; }
+  .card__date {
+    grid-column: span 10;
+    grid-row: span 1;
+    font-size: 14px; }
 
-.card__date {
+.card-grid {
+  grid-column: span 10;
+  grid-row: span 1; }
+
+.card .card__startitle {
   grid-column: span 10;
   grid-row: span 1;
-  font-size: 14px; }
-
-.card__startitle {
-  grid-column: span 10;
-  grid-row: span 1;
-  color: #e0e4e8;
+  color: #E0E4E8;
   font-size: 12px; }
 
 .card__starcontainer {

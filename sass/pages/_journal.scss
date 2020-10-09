@@ -13,20 +13,25 @@
   grid-template-rows: auto;
   justify-items: left;
   align-items: center;
-  box-shadow: 5px 5px grey;
+  box-shadow: $shadow-grey;
   border: 2px solid black;
+
+  &__date {
+    grid-column: span 10;
+    grid-row: span 1;
+    font-size: 14px;
+  }
 }
 
-.card__date {
+.card-grid {
   grid-column: span 10;
   grid-row: span 1;
-  font-size: 14px;
 }
 
-.card__startitle {
+.card .card__startitle {
   grid-column: span 10;
   grid-row: span 1;
-  color: #e0e4e8;
+  color: $third-color;
   font-size: 12px;
 }
 
