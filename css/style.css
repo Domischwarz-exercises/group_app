@@ -37,7 +37,8 @@ body {
 h2 {
   font-size: 1.6rem;
   font-weight: 500;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  margin-left: 3rem; }
 
 span {
   font-size: 1.2rem;
@@ -124,9 +125,74 @@ span {
 .graph__container {
   margin-left: 3rem;
   width: 31.5rem;
+  height: 20.8rem;
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(5, 1fr); }
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr); }
+
+.graph__yaxis {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+.graph-yaxis {
+  grid-column: 1; }
+
+.graph-y1 {
+  grid-row: 1; }
+
+.graph-y2 {
+  grid-row: 2; }
+
+.graph-y3 {
+  grid-row: 3; }
+
+.graph-y4 {
+  grid-row: 4; }
+
+.graph-y5 {
+  grid-row: 5; }
+
+.bar {
+  display: flex;
+  justify-content: center;
+  grid-row: 6;
+  grid-row: span 6;
+  background-image: linear-gradient(0deg, #7589a2 0.43%, #ffffff 0.43%, #ffffff 16.67%, #7589a2 16.67%, #7589a2 17.09%, #fff 17.09%, #fff 33.33%, #7589a2 33.33%, #7589a2 33.76%, #fff 33.76%, #fff 50%, #7589a2 50%, #7589a2 50.43%, #ffffff 50.43%, #ffffff 66.67%, #7589a2 66.67%, #7589a2 67.09%, #fff 67.09%, #fff 83.33%, #7589a2 83.33%, #7589a2 83.76%, #fff 83.76%, #fff 100%); }
+
+.graph__barorange {
+  background-color: #FF5A36;
+  width: 1.2rem;
+  border-radius: 15px 15px 0px 0px;
+  margin-top: 30%; }
+
+.graph__barblue {
+  background-color: #193251;
+  width: 1.2rem;
+  border-radius: 15px 15px 0px 0px;
+  margin-top: 20%; }
+
+.graph__xaxis {
+  display: flex;
+  justify-content: center; }
+
+.graph__xaxis {
+  grid-row: 7; }
+
+.graph-x1 {
+  grid-column: 2; }
+
+.graph-x2 {
+  grid-column: 3; }
+
+.graph-x3 {
+  grid-column: 4; }
+
+.graph-x4 {
+  grid-column: 5; }
+
+.graph-x5 {
+  grid-column: 6; }
 
 .waves {
   text-align: center;
