@@ -247,21 +247,30 @@ display: flex;
 justify-conent:
 */
 .card {
-  width: 315px;
+  width: 275px;
   height: auto;
+  margin-bottom: 20px;
   box-shadow: 0px 0.2rem 1.1rem rgba(25, 50, 81, 0.203238);
   padding: 20px;
   background-color: white;
   display: grid;
   grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto; }
+  .card__container {
+    margin: 98.42px 30px 78px 30px; }
   .card__date {
-    margin-bottom: 18px;
-    font-size: 14px;
-    grid-column: span 10;
-    grid-row: span 1; }
+    width: 77px;
+    height: 18px;
+    margin-bottom: 20px;
+    font-size: 1.4rem; }
+  .card__startitle {
+    width: 39px;
+    height: 16px;
+    margin-bottom: 10px; }
   .card__starcontainer {
-    margin-bottom: 25px;
+    width: 205px;
+    height: 24px;
+    margin-bottom: 21px;
     grid-column: span 7;
     display: flex;
     justify-content: space-between; }
@@ -273,8 +282,14 @@ justify-conent:
     width: 25px;
     height: 24px;
     padding-right: 10px; }
+  .card__rectangletitle {
+    width: 90px;
+    height: 16px;
+    margin-bottom: 10px; }
   .card__rectanglecontainer {
-    margin-bottom: 25px;
+    width: 275px;
+    height: 22px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between; }
   .card__rectangle--imgblue {
@@ -283,23 +298,41 @@ justify-conent:
   .card__rectangle--imggrey {
     width: 22px;
     height: 22px; }
+  .card__mottotitle {
+    width: 37px;
+    height: 16px;
+    margin-bottom: 10px; }
   .card__motto {
+    width: 165px;
+    height: 16px;
     margin-bottom: 20px;
-    font-size: 14px; }
+    font-size: 1.6rem; }
   .card__notetitle {
+    width: 37px;
+    height: 16px;
     margin-bottom: 10px; }
   .card__note {
+    width: 275px;
     height: auto;
-    font-size: 14px; }
+    font-size: 1.4rem; }
 
 .card-grid {
   grid-column: span 10;
   grid-row: span 1; }
 
 .card-title {
-  margin-bottom: 3px;
   color: #E0E4E8;
-  font-size: 12px; }
+  font-size: 1.2rem; }
+
+.btn__orange--middle {
+  width: 200px;
+  height: 48px;
+  margin: 30px 57.5px 20px 57.5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FF5A36;
+  color: #FFFFFF;
+  font-size: 1.6rem; }
 
 /*
 with:
