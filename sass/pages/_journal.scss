@@ -1,28 +1,28 @@
 .card {
   width: 315px;
   height: auto;
+  box-shadow: $shadow-grey;
   padding: 20px;
   background-color: white;
   display: grid;
   grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto;
-  box-shadow: $shadow-grey;
 
   &__date {
+    margin-bottom: 18px;
+    font-size: 14px;
     grid-column: span 10;
     grid-row: span 1;
-    font-size: 14px;
-    margin-bottom: 18px;
   }
 
   &__startitle {
   }
 
   &__starcontainer {
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     grid-column: span 7;
-    margin-bottom: 25px;
   }
 
   &__star--imgblue {
@@ -41,9 +41,9 @@
   }
 
   &__rectanglecontainer {
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
   }
 
   &__rectangle--imgblue {
@@ -60,8 +60,8 @@
   }
 
   &__motto {
-    font-size: 14px;
     margin-bottom: 20px;
+    font-size: 14px;
   }
 
   &__notetitle {
@@ -69,8 +69,8 @@
   }
 
   &__note {
-    font-size: 14px;
     height: auto;
+    font-size: 14px;
   }
 }
 
@@ -80,7 +80,20 @@
 }
 
 .card-title {
+  margin-bottom: 3px;
   color: $third-color;
   font-size: 12px;
-  margin-bottom: 3px;
 }
+
+/*
+with
+height
+margin
+border
+padding
+background-color
+color
+font-size
+??
+
+*/
