@@ -44,7 +44,7 @@
 
   &__rectanglecontainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 18px;
   }
 
@@ -117,6 +117,7 @@
 }
 
 .btn__orange--small {
+  border: none;
   background-color: $btn-primary-orange;
   grid-column: span 5;
   grid-row: span 1;

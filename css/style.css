@@ -174,7 +174,7 @@ span {
     margin-bottom: 12px; }
   .journal__rectanglecontainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 18px; }
   .journal__rectangle--imggrey {
     width: 22px;
@@ -229,6 +229,7 @@ span {
   margin-right: 11px; }
 
 .btn__orange--small {
+  border: none;
   background-color: #FF5A36;
   grid-column: span 5;
   grid-row: span 1;
