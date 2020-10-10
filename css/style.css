@@ -144,22 +144,22 @@ span {
 .card {
   width: 315px;
   height: auto;
+  box-shadow: 0px 0.2rem 1.1rem rgba(25, 50, 81, 0.203238);
   padding: 20px;
   background-color: white;
   display: grid;
   grid-template-columns: repeat(10, 31.5px);
-  grid-template-rows: auto;
-  box-shadow: 0px 0.2rem 1.1rem rgba(25, 50, 81, 0.203238); }
+  grid-template-rows: auto; }
   .card__date {
-    grid-column: span 10;
-    grid-row: span 1;
+    margin-bottom: 18px;
     font-size: 14px;
-    margin-bottom: 18px; }
+    grid-column: span 10;
+    grid-row: span 1; }
   .card__starcontainer {
+    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
-    grid-column: span 7;
-    margin-bottom: 25px; }
+    grid-column: span 7; }
   .card__star--imgblue {
     width: 25px;
     height: 24px;
@@ -169,9 +169,9 @@ span {
     height: 24px;
     padding-right: 10px; }
   .card__rectanglecontainer {
+    margin-bottom: 25px;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px; }
+    justify-content: space-between; }
   .card__rectangle--imgblue {
     width: 22px;
     height: 22px; }
@@ -179,19 +179,32 @@ span {
     width: 22px;
     height: 22px; }
   .card__motto {
-    font-size: 14px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-size: 14px; }
   .card__notetitle {
     margin-bottom: 10px; }
   .card__note {
-    font-size: 14px;
-    height: auto; }
+    height: auto;
+    font-size: 14px; }
 
 .card-grid {
   grid-column: span 10;
   grid-row: span 1; }
 
 .card-title {
+  margin-bottom: 3px;
   color: #E0E4E8;
-  font-size: 12px;
-  margin-bottom: 3px; }
+  font-size: 12px; }
+
+/*
+with
+height
+margin
+border
+padding
+background-color
+color
+font-size
+??
+
+*/
