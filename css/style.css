@@ -233,16 +233,18 @@ span {
   grid-row: span 1; }
 
 /*
-with
-height
-margin
-border
-padding
-background-color
-color
-font-size
-??
-
+with:
+height:
+margin:
+border:
+padding:
+background-color:
+color:
+font-size:
+grid-column:
+grid-row:
+display: flex;
+justify-conent:
 */
 .card {
   width: 315px;
@@ -260,9 +262,9 @@ font-size
     grid-row: span 1; }
   .card__starcontainer {
     margin-bottom: 25px;
+    grid-column: span 7;
     display: flex;
-    justify-content: space-between;
-    grid-column: span 7; }
+    justify-content: space-between; }
   .card__star--imgblue {
     width: 25px;
     height: 24px;
@@ -300,14 +302,16 @@ font-size
   font-size: 12px; }
 
 /*
-with
-height
-margin
-border
-padding
-background-color
-color
-font-size
-??
-
+with:
+height:
+margin:
+border:
+padding:
+background-color:
+color:
+font-size:
+grid-column:
+grid-row:
+display: flex;
+justify-conent:
 */

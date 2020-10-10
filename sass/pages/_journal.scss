@@ -20,9 +20,9 @@
 
   &__starcontainer {
     margin-bottom: 25px;
+    grid-column: span 7;
     display: flex;
     justify-content: space-between;
-    grid-column: span 7;
   }
 
   &__star--imgblue {
@@ -86,14 +86,16 @@
 }
 
 /*
-with
-height
-margin
-border
-padding
-background-color
-color
-font-size
-??
-
+with:
+height:
+margin:
+border:
+padding:
+background-color:
+color:
+font-size:
+grid-column:
+grid-row:
+display: flex;
+justify-conent:
 */
