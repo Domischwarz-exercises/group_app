@@ -157,11 +157,11 @@ span {
     height: 16px;
     margin-bottom: 12px; }
   .journal__starcontainer {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 23.54px;
     padding-left: 10px;
-    padding-right: 39.25px; }
+    padding-right: 39.25px;
+    display: flex;
+    justify-content: space-between; }
   .journal__star--imgblue {
     width: 35.75px;
     height: 34.46px; }
@@ -173,9 +173,9 @@ span {
     height: 16px;
     margin-bottom: 12px; }
   .journal__rectanglecontainer {
+    margin-bottom: 18px;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 18px; }
+    justify-content: space-between; }
   .journal__rectangle--imggrey {
     width: 22px;
     height: 22px;
@@ -188,29 +188,25 @@ span {
     height: 16px;
     margin-bottom: 10px; }
   .journal__motto {
-    resize: none;
     width: 315px;
     height: 62px;
-    font-size: 1.6rem;
+    margin-bottom: 20px;
     border: 1px solid #7589A2;
     border-radius: 5px;
-    margin-bottom: 20px; }
+    font-size: 1.6rem;
+    resize: none; }
   .journal__notestitle {
     width: 44px;
     height: 16px;
     margin-bottom: 10px; }
   .journal__notes {
-    resize: none;
     width: 315px;
     height: 124px;
-    font-size: 1.6rem;
+    margin-bottom: 30px;
     border: 1px solid #7589A2;
     border-radius: 5px;
-    margin-bottom: 30px; }
-
-.journal-margin {
-  margin-left: 30px;
-  margin-bottom: 88px; }
+    font-size: 1.6rem;
+    resize: none; }
 
 .journal-title {
   font-size: 1.4rem; }
@@ -220,22 +216,34 @@ span {
   grid-row: span 1; }
 
 .btn__transparent--small {
-  background-color: #FFFFFF;
-  grid-column: span 5;
-  grid-row: span 1;
-  border: none;
   width: 152px;
   height: 48px;
-  margin-right: 11px; }
+  margin-right: 11px;
+  border: none;
+  background-color: #FFFFFF;
+  grid-column: span 5;
+  grid-row: span 1; }
 
 .btn__orange--small {
+  width: 152px;
+  height: 48px;
   border: none;
   background-color: #FF5A36;
   grid-column: span 5;
-  grid-row: span 1;
-  width: 152px;
-  height: 48px; }
+  grid-row: span 1; }
 
+/*
+with
+height
+margin
+border
+padding
+background-color
+color
+font-size
+??
+
+*/
 .card {
   width: 315px;
   height: auto;

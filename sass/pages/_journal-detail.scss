@@ -19,11 +19,11 @@
   }
 
   &__starcontainer {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 23.54px;
     padding-left: 10px;
     padding-right: 39.25px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__star--imgblue {
@@ -43,9 +43,9 @@
   }
 
   &__rectanglecontainer {
+    margin-bottom: 18px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 18px;
   }
 
   &__rectangle--imggrey {
@@ -66,13 +66,13 @@
   }
 
   &__motto {
-    resize: none;
     width: 315px;
     height: 62px;
-    font-size: $semibold16;
+    margin-bottom: 20px;
     border: 1px solid $border-color-2;
     border-radius: 5px;
-    margin-bottom: 20px;
+    font-size: $semibold16;
+    resize: none;
   }
 
   &__notestitle {
@@ -82,19 +82,14 @@
   }
 
   &__notes {
-    resize: none;
     width: 315px;
     height: 124px;
-    font-size: $semibold16;
+    margin-bottom: 30px;
     border: 1px solid $border-color-2;
     border-radius: 5px;
-    margin-bottom: 30px;
+    font-size: $semibold16;
+    resize: none;
   }
-}
-
-.journal-margin {
-  margin-left: 30px;
-  margin-bottom: 88px;
 }
 
 .journal-title {
@@ -107,20 +102,33 @@
 }
 
 .btn__transparent--small {
-  background-color: $white;
-  grid-column: span 5;
-  grid-row: span 1;
-  border: none;
   width: 152px;
   height: 48px;
   margin-right: 11px;
+  border: none;
+  background-color: $white;
+  grid-column: span 5;
+  grid-row: span 1;
 }
 
 .btn__orange--small {
+  width: 152px;
+  height: 48px;
   border: none;
   background-color: $btn-primary-orange;
   grid-column: span 5;
   grid-row: span 1;
-  width: 152px;
-  height: 48px;
 }
+
+/*
+with
+height
+margin
+border
+padding
+background-color
+color
+font-size
+??
+
+*/
