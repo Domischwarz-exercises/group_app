@@ -141,6 +141,12 @@ span {
     stroke: none;
     fill: #f8f8f8; }
 
+.journal {
+  padding: 1px; }
+
+.journal-title {
+  font-size: 12; }
+
 .card {
   width: 315px;
   height: auto;
