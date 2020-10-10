@@ -147,15 +147,14 @@ span {
   padding: 20px;
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(10, auto);
+  grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto;
-  justify-items: left;
-  align-items: center;
   box-shadow: 0px 0.2rem 1.1rem rgba(25, 50, 81, 0.203238); }
   .card__date {
     grid-column: span 10;
     grid-row: span 1;
-    font-size: 14px; }
+    font-size: 14px;
+    margin-bottom: 18px; }
 
 .card-grid {
   grid-column: span 10;
@@ -163,20 +162,29 @@ span {
 
 .card-title {
   color: #E0E4E8;
-  font-size: 12px; }
+  font-size: 12px;
+  margin-bottom: 3px; }
 
 .card__starcontainer {
-  list-style: none;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  grid-column: span 7;
+  margin-bottom: 25px; }
 
 .card__star--imgblue {
   width: 25px;
-  height: 24px; }
+  height: 24px;
+  padding-right: 10px; }
 
 .card__star--imggrey {
   width: 25px;
-  height: 24px; }
+  height: 24px;
+  padding-right: 10px; }
+
+.card__rectanglecontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px; }
 
 .card__rectangle--imgblue {
   width: 22px;
@@ -187,7 +195,11 @@ span {
   height: 22px; }
 
 .card__motto {
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 20px; }
+
+.card__notetitle {
+  margin-bottom: 10px; }
 
 .card__note {
   font-size: 14px;

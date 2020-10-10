@@ -4,16 +4,71 @@
   padding: 20px;
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(10, auto);
+  grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto;
-  justify-items: left;
-  align-items: center;
   box-shadow: $shadow-grey;
 
   &__date {
     grid-column: span 10;
     grid-row: span 1;
     font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  &__starcontainer {
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 7;
+    margin-bottom: 25px;
+  }
+
+  &__star--imgblue {
+    width: 25px;
+    height: 24px;
+    padding-right: 10px;
+  }
+
+  &__star--imggrey {
+    width: 25px;
+    height: 24px;
+    padding-right: 10px;
+  }
+
+  &__rectangletitle {
+  }
+
+  &__rectanglecontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__rectangle--imgblue {
+    width: 22px;
+    height: 22px;
+  }
+
+  &__rectangle--imggrey {
+    width: 22px;
+    height: 22px;
+  }
+
+  &__mottotitle {
+    margin-bottom: ;
+  }
+
+  &__motto {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  &__notetitle {
+    margin-bottom: 10px;
+  }
+
+  &__note {
+    font-size: 14px;
+    height: auto;
   }
 }
 
@@ -25,51 +80,5 @@
 .card-title {
   color: $third-color;
   font-size: 12px;
-}
-
-.card__starcontainer {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-.card__star--imgblue {
-  width: 25px;
-  height: 24px;
-}
-
-.card__star--imggrey {
-  width: 25px;
-  height: 24px;
-}
-
-.card__rectangletitle {
-}
-
-.card__rectanglecontainer {
-}
-
-.card__rectangle--imgblue {
-  width: 22px;
-  height: 22px;
-}
-
-.card__rectangle--imggrey {
-  width: 22px;
-  height: 22px;
-}
-
-.card__mottotitle {
-}
-
-.card__motto {
-  font-size: 14px;
-}
-
-.card__notetitle {
-}
-
-.card__note {
-  font-size: 14px;
-  height: auto;
+  margin-bottom: 3px;
 }
