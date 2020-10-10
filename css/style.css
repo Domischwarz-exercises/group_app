@@ -144,35 +144,96 @@ span {
 .journal {
   width: 315px;
   height: auto;
-  padding: 1px;
+  padding: 30.42px 30px 88px 30px;
   display: grid;
   grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto; }
+  .journal__date {
+    width: 126px;
+    height: 18px;
+    margin-bottom: 30px; }
+  .journal__startitle {
+    width: 47px;
+    height: 16px;
+    margin-bottom: 12px; }
   .journal__starcontainer {
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-between;
+    margin-bottom: 23.54px;
+    padding-left: 10px;
+    padding-right: 39.25px; }
   .journal__star--imgblue {
-    width: 36px;
-    height: 35px; }
+    width: 35.75px;
+    height: 34.46px; }
   .journal__star--imggrey {
     width: 36px;
     height: 35px; }
+  .journal__rectangletitle {
+    width: 112px;
+    height: 16px;
+    margin-bottom: 12px; }
   .journal__rectanglecontainer {
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    margin-bottom: 18px; }
   .journal__rectangle--imggrey {
     width: 22px;
-    height: 22px; }
+    height: 22px;
+    border-radius: 4px; }
   .journal__rectangle--imgblue {
     width: 22px;
     height: 22px; }
+  .journal__mottotitle {
+    width: 45px;
+    height: 16px;
+    margin-bottom: 10px; }
+  .journal__motto {
+    resize: none;
+    width: 315px;
+    height: 62px;
+    font-size: 1.6rem;
+    border: 1px solid #7589A2;
+    border-radius: 5px;
+    margin-bottom: 20px; }
+  .journal__notestitle {
+    width: 44px;
+    height: 16px;
+    margin-bottom: 10px; }
+  .journal__notes {
+    resize: none;
+    width: 315px;
+    height: 124px;
+    font-size: 1.6rem;
+    border: 1px solid #7589A2;
+    border-radius: 5px;
+    margin-bottom: 30px; }
+
+.journal-margin {
+  margin-left: 30px;
+  margin-bottom: 88px; }
 
 .journal-title {
-  font-size: 12px; }
+  font-size: 1.4rem; }
 
 .journal-grid {
   grid-column: span 10;
   grid-row: span 1; }
+
+.btn__transparent--small {
+  background-color: #FFFFFF;
+  grid-column: span 5;
+  grid-row: span 1;
+  border: none;
+  width: 152px;
+  height: 48px;
+  margin-right: 11px; }
+
+.btn__orange--small {
+  background-color: #FF5A36;
+  grid-column: span 5;
+  grid-row: span 1;
+  width: 152px;
+  height: 48px; }
 
 .card {
   width: 315px;

@@ -1,25 +1,34 @@
 .journal {
   width: 315px;
   height: auto;
-  padding: 1px;
+  padding: 30.42px 30px 88px 30px;
   display: grid;
   grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto;
 
   &__date {
+    width: 126px;
+    height: 18px;
+    margin-bottom: 30px;
   }
 
   &__startitle {
+    width: 47px;
+    height: 16px;
+    margin-bottom: 12px;
   }
 
   &__starcontainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-bottom: 23.54px;
+    padding-left: 10px;
+    padding-right: 39.25px;
   }
 
   &__star--imgblue {
-    width: 36px;
-    height: 35px;
+    width: 35.75px;
+    height: 34.46px;
   }
 
   &__star--imggrey {
@@ -28,16 +37,21 @@
   }
 
   &__rectangletitle {
+    width: 112px;
+    height: 16px;
+    margin-bottom: 12px;
   }
 
   &__rectanglecontainer {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 18px;
   }
 
   &__rectangle--imggrey {
     width: 22px;
     height: 22px;
+    border-radius: 4px;
   }
 
   &__rectangle--imgblue {
@@ -46,20 +60,66 @@
   }
 
   &__mottotitle {
+    width: 45px;
+    height: 16px;
+    margin-bottom: 10px;
   }
 
   &__motto {
+    resize: none;
+    width: 315px;
+    height: 62px;
+    font-size: $semibold16;
+    border: 1px solid $border-color-2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__notestitle {
+    width: 44px;
+    height: 16px;
+    margin-bottom: 10px;
   }
 
   &__notes {
+    resize: none;
+    width: 315px;
+    height: 124px;
+    font-size: $semibold16;
+    border: 1px solid $border-color-2;
+    border-radius: 5px;
+    margin-bottom: 30px;
   }
 }
 
+.journal-margin {
+  margin-left: 30px;
+  margin-bottom: 88px;
+}
+
 .journal-title {
-  font-size: 12px;
+  font-size: $semibold14;
 }
 
 .journal-grid {
   grid-column: span 10;
   grid-row: span 1;
+}
+
+.btn__transparent--small {
+  background-color: $white;
+  grid-column: span 5;
+  grid-row: span 1;
+  border: none;
+  width: 152px;
+  height: 48px;
+  margin-right: 11px;
+}
+
+.btn__orange--small {
+  background-color: $btn-primary-orange;
+  grid-column: span 5;
+  grid-row: span 1;
+  width: 152px;
+  height: 48px;
 }
