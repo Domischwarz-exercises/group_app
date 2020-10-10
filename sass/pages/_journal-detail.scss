@@ -1,5 +1,10 @@
 .journal {
+  width: 315px;
+  height: auto;
   padding: 1px;
+  display: grid;
+  grid-template-columns: repeat(10, 31.5px);
+  grid-template-rows: auto;
 
   &__date {
   }
@@ -8,24 +13,36 @@
   }
 
   &__starcontainer {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   &__star--imgblue {
+    width: 36px;
+    height: 35px;
   }
 
   &__star--imggrey {
+    width: 36px;
+    height: 35px;
   }
 
   &__rectangletitle {
   }
 
   &__rectanglecontainer {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   &__rectangle--imggrey {
+    width: 22px;
+    height: 22px;
   }
 
   &__rectangle--imgblue {
+    width: 22px;
+    height: 22px;
   }
 
   &__mottotitle {
@@ -39,5 +56,10 @@
 }
 
 .journal-title {
-  font-size: 12;
+  font-size: 12px;
+}
+
+.journal-grid {
+  grid-column: span 10;
+  grid-row: span 1;
 }

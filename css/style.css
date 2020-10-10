@@ -142,10 +142,37 @@ span {
     fill: #f8f8f8; }
 
 .journal {
-  padding: 1px; }
+  width: 315px;
+  height: auto;
+  padding: 1px;
+  display: grid;
+  grid-template-columns: repeat(10, 31.5px);
+  grid-template-rows: auto; }
+  .journal__starcontainer {
+    display: flex;
+    justify-content: space-evenly; }
+  .journal__star--imgblue {
+    width: 36px;
+    height: 35px; }
+  .journal__star--imggrey {
+    width: 36px;
+    height: 35px; }
+  .journal__rectanglecontainer {
+    display: flex;
+    justify-content: space-evenly; }
+  .journal__rectangle--imggrey {
+    width: 22px;
+    height: 22px; }
+  .journal__rectangle--imgblue {
+    width: 22px;
+    height: 22px; }
 
 .journal-title {
-  font-size: 12; }
+  font-size: 12px; }
+
+.journal-grid {
+  grid-column: span 10;
+  grid-row: span 1; }
 
 .card {
   width: 315px;
