@@ -1,4 +1,4 @@
-.journal {
+.journaldetail {
   width: 315px;
   height: auto;
   padding: 30.42px 30px 88px 30px;
@@ -92,11 +92,11 @@
   }
 }
 
-.journal-title {
+.journaldetail-title {
   font-size: $semibold14;
 }
 
-.journal-grid {
+.journaldetail-grid {
   grid-column: span 10;
   grid-row: span 1;
 }

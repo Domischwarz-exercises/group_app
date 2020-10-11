@@ -141,53 +141,53 @@ span {
     stroke: none;
     fill: #f8f8f8; }
 
-.journal {
+.journaldetail {
   width: 315px;
   height: auto;
   padding: 30.42px 30px 88px 30px;
   display: grid;
   grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto; }
-  .journal__date {
+  .journaldetail__date {
     width: 126px;
     height: 18px;
     margin-bottom: 30px; }
-  .journal__startitle {
+  .journaldetail__startitle {
     width: 47px;
     height: 16px;
     margin-bottom: 12px; }
-  .journal__starcontainer {
+  .journaldetail__starcontainer {
     margin-bottom: 23.54px;
     padding-left: 10px;
     padding-right: 39.25px;
     display: flex;
     justify-content: space-between; }
-  .journal__star--imgblue {
+  .journaldetail__star--imgblue {
     width: 35.75px;
     height: 34.46px; }
-  .journal__star--imggrey {
+  .journaldetail__star--imggrey {
     width: 36px;
     height: 35px; }
-  .journal__rectangletitle {
+  .journaldetail__rectangletitle {
     width: 112px;
     height: 16px;
     margin-bottom: 12px; }
-  .journal__rectanglecontainer {
+  .journaldetail__rectanglecontainer {
     margin-bottom: 18px;
     display: flex;
     justify-content: space-between; }
-  .journal__rectangle--imggrey {
+  .journaldetail__rectangle--imggrey {
     width: 22px;
     height: 22px;
     border-radius: 4px; }
-  .journal__rectangle--imgblue {
+  .journaldetail__rectangle--imgblue {
     width: 22px;
     height: 22px; }
-  .journal__mottotitle {
+  .journaldetail__mottotitle {
     width: 45px;
     height: 16px;
     margin-bottom: 10px; }
-  .journal__motto {
+  .journaldetail__motto {
     width: 315px;
     height: 62px;
     margin-bottom: 20px;
@@ -195,11 +195,11 @@ span {
     border-radius: 5px;
     font-size: 1.6rem;
     resize: none; }
-  .journal__notestitle {
+  .journaldetail__notestitle {
     width: 44px;
     height: 16px;
     margin-bottom: 10px; }
-  .journal__notes {
+  .journaldetail__notes {
     width: 315px;
     height: 124px;
     margin-bottom: 30px;
@@ -208,10 +208,10 @@ span {
     font-size: 1.6rem;
     resize: none; }
 
-.journal-title {
+.journaldetail-title {
   font-size: 1.4rem; }
 
-.journal-grid {
+.journaldetail-grid {
   grid-column: span 10;
   grid-row: span 1; }
 
@@ -246,6 +246,9 @@ grid-row:
 display: flex;
 justify-conent:
 */
+.journal {
+  margin: 30.42px 30px 14px 30px; }
+
 .card {
   width: 275px;
   height: auto;
@@ -256,8 +259,6 @@ justify-conent:
   display: grid;
   grid-template-columns: repeat(10, 31.5px);
   grid-template-rows: auto; }
-  .card__container {
-    margin: 98.42px 30px 78px 30px; }
   .card__date {
     width: 77px;
     height: 18px;
@@ -327,7 +328,6 @@ justify-conent:
 .btn__orange--middle {
   width: 200px;
   height: 48px;
-  margin: 30px 87.5px 0px 87.5px;
   border: none;
   border-radius: 5px;
   background-color: #FF5A36;
