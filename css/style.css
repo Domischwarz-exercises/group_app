@@ -160,7 +160,7 @@ h2 {
   grid-row: 5;
   grid-row: span 5;
   background-size: auto auto;
-  background-image: repeating-linear-gradient(180deg, transparent, transparent 35px, rgba(117, 137, 162, 0.3) 35px, rgba(117, 137, 162, 0.3) 35.7px); }
+  background-image: repeating-linear-gradient(180deg, transparent, transparent 35px, rgba(117, 137, 162, 0.3) 35px, rgba(117, 137, 162, 0.3) 35.8px); }
 
 .graph__barorange {
   background-color: #FF5A36;
