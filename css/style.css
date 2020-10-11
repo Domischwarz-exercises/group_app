@@ -35,15 +35,8 @@ body {
   line-height: 2.4; }
 
 h2 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
   margin-left: 3rem; }
-
-span {
-  font-size: 1.2rem;
-  color: #7589A2;
-  font-weight: 400; }
 
 .btn {
   display: flex;
@@ -100,6 +93,9 @@ span {
   background-color: #193251;
   margin-right: 1rem; }
 
+.rateenergy_header {
+  margin-bottom: 1.1rem; }
+
 .nav {
   display: flex;
   justify-content: space-evenly;
@@ -128,14 +124,18 @@ span {
   width: 31.5rem;
   height: 20.8rem;
   display: grid;
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-columns: repeat(6, 1fr);
-  margin-bottom: 1.4rem; }
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 0.5fr repeat(5, 1fr);
+  margin-bottom: 1.4rem;
+  margin-top: 0.6rem; }
 
 .graph__yaxis {
   display: flex;
-  justify-content: center;
-  align-items: flex-end; }
+  align-items: flex-end;
+  font-family: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #7589A2; }
 
 .graph-yaxis {
   grid-column: 1; }
@@ -158,29 +158,43 @@ span {
 .bar {
   display: flex;
   justify-content: center;
-  grid-row: 6;
-  grid-row: span 6;
-  background-image: linear-gradient(0deg, #7589a2 0.43%, #ffffff 0.43%, #ffffff 16.67%, #7589a2 16.67%, #7589a2 17.09%, #fff 17.09%, #fff 33.33%, #7589a2 33.33%, #7589a2 33.76%, #fff 33.76%, #fff 50%, #7589a2 50%, #7589a2 50.43%, #ffffff 50.43%, #ffffff 66.67%, #7589a2 66.67%, #7589a2 67.09%, #fff 67.09%, #fff 83.33%, #7589a2 83.33%, #7589a2 83.76%, #fff 83.76%, #fff 100%); }
+  grid-row: 5;
+  grid-row: span 5;
+  background-size: auto auto;
+  background-image: repeating-linear-gradient(180deg, transparent, transparent 33px, rgba(117, 137, 162, 0.3) 33px, rgba(117, 137, 162, 0.3) 34.6px); }
 
 .graph__barorange {
   background-color: #FF5A36;
   width: 1.2rem;
   border-radius: 15px 15px 0px 0px;
-  margin-top: 30%; }
+  margin-top: 40%; }
 
 .graph__barblue {
   background-color: #193251;
   width: 1.2rem;
   border-radius: 15px 15px 0px 0px;
-  margin-top: 20%; }
+  margin-top: 40%; }
+
+.bar-2 {
+  margin-top: 75%; }
+
+.bar-3 {
+  margin-top: 110%; }
+
+.bar-4 {
+  margin-top: 85%; }
 
 .graph__xaxis {
   display: flex;
   justify-content: center;
-  align-items: flex-end; }
+  align-items: flex-end;
+  font-family: 1.2rem;
+  color: #7589A2;
+  font-size: 1.2rem;
+  font-weight: 300; }
 
 .graph__xaxis {
-  grid-row: 7; }
+  grid-row: 6; }
 
 .graph-x1 {
   grid-column: 2; }
