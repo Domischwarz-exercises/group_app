@@ -3,10 +3,9 @@
     width: 31.5rem;
     height: 20.8rem;
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr) 0.8fr;
     grid-template-columns: 0.5fr repeat(5, 1fr);
     margin-bottom: 1.4rem;
-    margin-top: 0.6rem;
 }
 
 .graph__yaxis {
@@ -48,7 +47,7 @@
   grid-row: 5;
   grid-row: span 5;
   background-size: auto auto;
-  background-image: repeating-linear-gradient(180deg, transparent, transparent 33px, rgba(117, 137, 162, 0.3) 33px, rgba(117, 137, 162, 0.3) 34.6px);
+  background-image: repeating-linear-gradient(180deg, transparent, transparent 35px, rgba(117, 137, 162, 0.3) 35px, rgba(117, 137, 162, 0.3) 35.7px);
 }
 
 .graph__barorange {
@@ -78,7 +77,27 @@
 }
 
 .bar-5 {
+    margin-top: 70%;
+}
 
+.bar-6 {
+    margin-top: 150%;
+}
+
+.bar-7 {
+    margin-top: 200%;
+}
+
+.bar-8 {
+    margin-top: 170%;
+}
+
+.bar-9 {
+    margin-top: 240%;
+}
+
+.bar-10 {
+    margin-top: 260%;
 }
 
 .graph__xaxis {
