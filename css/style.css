@@ -327,6 +327,7 @@ justify-conent:
 .btn__orange--middle {
   width: 200px;
   height: 48px;
+  margin: 30px 87.5px 0px 87.5px;
   border: none;
   border-radius: 5px;
   background-color: #FF5A36;
