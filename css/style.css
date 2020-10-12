@@ -10,25 +10,27 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: grey; }
+  background-color: #FFFFFF; }
 
 body {
   font-family: "Open-Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6; }
 
-.container {
+/*.container {
   max-width: 90rem;
   margin: 8rem auto;
-  background-color: #FFFFFF;
+  background-color: $white;
   box-shadow: 0px 2rem 6rem rgba(25, 50, 81, 0.203238);
-  min-height: 100vh; }
-  @media only screen and (max-width: 75em) {
-    .container {
-      margin: 0;
-      max-width: 100%;
-      width: 100%; } }
 
+  min-height: 100vh;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}*/
 .heading-1 {
   font-size: 1.6rem;
   color: #193251;
@@ -100,26 +102,21 @@ span {
 
 .nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center; }
+  .nav__image {
+    height: 2.4rem; }
+
+.nav-bar {
+  display: flex;
   align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 1rem;
+  width: 335px;
+  height: 4.4rem;
   background-color: #FFFFFF;
   box-shadow: 0px 0.2rem 1.1rem rgba(25, 50, 81, 0.203238);
-  border-radius: 1rem;
-  position: absolute;
-  width: 335px;
-  height: 44px;
-  left: 20px;
-  bottom: 2rem;
-  /*&__image {
-        height: 6vh;
-    }*/
-  /*& a{   
-   text-align: center;
-    
-   & img {
-       width: 50%;
-   }
-}*/ }
+  border-radius: 1rem; }
 
 .graph__container {
   margin-left: 3rem;
@@ -224,3 +221,24 @@ span {
   grid-row: span 1;
   font-size: 14px;
   height: auto; }
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  main .buddy {
+    margin-bottom: 2rem; }
+    main .buddy__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 335px;
+      height: 58px;
+      background-color: #FFFFFF; }
+  main .one {
+    border: 1px solid #E0E4E8;
+    border-radius: .6rem .6rem 0 0;
+    border-style: solid solid none solid; }
+  main .two {
+    border: 1px solid #E0E4E8;
+    border-radius: 0 0 .6rem .6rem; }
