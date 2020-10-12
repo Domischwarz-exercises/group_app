@@ -233,7 +233,7 @@ span {
   grid-row: span 1; }
 
 /*
-with:
+width:
 height:
 margin:
 border:
@@ -244,10 +244,10 @@ font-size:
 grid-column:
 grid-row:
 display: flex;
-justify-conent:
+justify-content:
 */
 .journal {
-  margin: 30.42px 30px 14px 30px; }
+  margin: 30.42px 30px 78px 30px; }
 
 .card {
   width: 275px;
