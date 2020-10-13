@@ -118,6 +118,7 @@ h2 {
 
 .graph__container {
   margin-left: 3rem;
+  margin-right: 3rem;
   width: 31.5rem;
   height: 20.8rem;
   display: grid;
@@ -432,12 +433,20 @@ justify-content:
   color: #FFFFFF;
   font-size: 1.6rem; }
 
-.card__note {
-  grid-column: span 10;
-  grid-row: span 1;
-  font-size: 14px;
-  height: auto; }
-
+/*
+with:
+height:
+margin:
+border:
+padding:
+background-color:
+color:
+font-size:
+grid-column:
+grid-row:
+display: flex;
+justify-conent:
+*/
 main {
   display: flex;
   justify-content: center;
@@ -458,4 +467,3 @@ main {
   main .two {
     border: 1px solid #E0E4E8;
     border-radius: 0 0 .6rem .6rem; }
-
