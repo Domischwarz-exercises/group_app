@@ -229,22 +229,16 @@ h2 {
 
 .waves {
   text-align: center;
-  overflow: hidden;
-  position: relative; }
+  overflow: hidden; }
   .waves__heading {
     background-color: #F8F8F8;
-    padding-top: 2rem;
-    position: relative; }
+    padding-top: 3rem; }
   .waves svg {
     height: 6rem;
-    width: 100%;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    fill: #201818; }
+    width: 100%; }
   .waves path {
     stroke: none;
-    fill: #201818; }
+    fill: #f8f8f8; }
 
 .journaldetail {
   width: 315px;
