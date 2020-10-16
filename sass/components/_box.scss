@@ -12,12 +12,10 @@ main {
         &__content {     
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center;            
             width: 315px;
-            height: 58px;
-            
-            background-color: $white;
-            
+            height: 58px;                    
+            background-color: $white;            
         }
         
         &__content--title {
@@ -35,6 +33,13 @@ main {
         transform: translate(-50%, -50%);
     }
 
+    .buddy-imagedash {
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%);
+    }
     .one{
         border: 1px solid #E0E4E8;
         border-radius: .6rem .6rem 0 0;
