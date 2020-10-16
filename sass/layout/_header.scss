@@ -4,27 +4,22 @@
     //position: relative;
     text-align: center;
     overflow: hidden;
-    position: relative;
+    //height: 10rem; 
 
     &__heading {        
         background-color: $light-grey;
         //height: 3rem;
-        padding-top: 2rem;
-        position: relative;
+        padding-top: 3rem;
       
     }
     & svg {
         height: 6rem; 
         width: 100%;
-        position: absolute;
-        top: 30px;
-        left: 0;
-        fill: #201818;
     }
 
     & path {
         stroke: none; 
-        fill: #201818;
+        fill: #f8f8f8;
     }
 }
 
