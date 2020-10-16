@@ -4,10 +4,6 @@ export default {
   title: 'Navigation'
 }
 
-export default {
-  title: 'Graph'
-}
-
 export const Navigation = ()  => `<footer class="nav">
 <div class="nav-bar">
 <a ><img src="/img/dashboardIcon.png" alt="" class="nav__image home-btn"></a>
