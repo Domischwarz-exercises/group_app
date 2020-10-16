@@ -1,21 +1,21 @@
 .graph__container {
+    display: grid;
+    grid-template-columns: 0.5fr repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr) 0.8fr;
+    height: 20.8rem;  
+    margin-bottom: 1.4rem;
     margin-left: 3rem;
     margin-right: 3rem;
     width: 31.5rem;
-    height: 20.8rem;
-    display: grid;
-    grid-template-rows: repeat(5, 1fr) 0.8fr;
-    grid-template-columns: 0.5fr repeat(5, 1fr);
-    margin-bottom: 1.4rem;
 }
 
 .graph__yaxis {
+  color: $secondary-color;
   display: flex;
   align-items: flex-end;
   font-family: $regular12;
   font-size: 1.2rem;
   font-weight: 300;
-  color: $secondary-color;
 }
 
 .graph-yaxis {
@@ -43,26 +43,25 @@
 }
 
 .bar {
-  display:flex;
-  justify-content: center;
-  grid-row: 5;
-  grid-row: span 5;
-  background-size: auto auto;
   background-image: repeating-linear-gradient(180deg, transparent, transparent 35px, rgba(117, 137, 162, 0.3) 35px, rgba(117, 137, 162, 0.3) 35.8px);
+  background-size: auto auto;
+  display:flex;
+  grid-row: span 5;
+  justify-content: center;
 }
 
 .graph__barorange {
   background-color: $btn-primary-orange;
-  width: 1.2rem;
   border-radius: 15px 15px 0px 0px;
   margin-top: 40%;
+  width: 1.2rem;
 }
 
 .graph__barblue {
   background-color: $primary-color;
-  width: 1.2rem;
   border-radius: 15px 15px 0px 0px;
   margin-top: 40%;
+  width: 1.2rem;
 }
 
 .bar-2 {
@@ -102,13 +101,13 @@
 }
 
 .graph__xaxis {
-  display: flex;
-  justify-content: center;
   align-items: flex-end;
-  font-family: $regular12;
   color: $secondary-color;
+  display: flex;
+  font-family: $regular12;
   font-size: 1.2rem;
   font-weight: 300;
+  justify-content: center;
 }
 
 .graph__xaxis {
