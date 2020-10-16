@@ -1,8 +1,8 @@
 .heading-1 {
   font-size: $semibold16;  
   line-height: 1.8;
+  text-transform: uppercase;
 }
-
 
 .heading-2 {
   font-size: $semibold14;
@@ -16,4 +16,5 @@
 span{
   color: $secondary-color;
   font-size: $regular12;
+  text-transform: initial;
 }
