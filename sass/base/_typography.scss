@@ -1,11 +1,19 @@
 .heading-1 {
-  font-size: $semibold16;
-  color: $primary-color;
-  line-height: 2.4;
+  font-size: $semibold16;  
+  line-height: 1.8;
 }
 
-h2 {
+
+.heading-2 {
   font-size: $semibold14;
-  margin-left: 3rem;
 }
 
+.heading-3 {
+  font-size: $semibold14;
+  color: $secondary-color;
+}
+
+span{
+  color: $secondary-color;
+  font-size: $regular12;
+}

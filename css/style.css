@@ -15,30 +15,56 @@ html {
 body {
   font-family: "Open-Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6; }
+  line-height: 1.6;
+  color: #193251; }
 
-/*.container {
-  max-width: 90rem;
-  margin: 8rem auto;
-  background-color: $white;
-  box-shadow: 0px 2rem 6rem rgba(25, 50, 81, 0.203238);
-
-  min-height: 100vh;
-
-  @media only screen and (max-width: $bp-largest) {
-    margin: 0;
-    max-width: 100%;
-    width: 100%;
-  }
-}*/
 .heading-1 {
   font-size: 1.6rem;
-  color: #193251;
-  line-height: 2.4; }
+  line-height: 1.8; }
 
-h2 {
+.heading-2 {
+  font-size: 1.4rem; }
+
+.heading-3 {
   font-size: 1.4rem;
-  margin-left: 3rem; }
+  color: #7589A2; }
+
+span {
+  color: #7589A2;
+  font-size: 1.2rem; }
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  main .buddy {
+    margin: 2rem 0;
+    position: relative; }
+    main .buddy__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 315px;
+      height: 58px;
+      background-color: #FFFFFF; }
+    main .buddy__content--title {
+      margin-bottom: 2rem; }
+  main .buddy-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%); }
+  main .one {
+    border: 1px solid #E0E4E8;
+    border-radius: .6rem .6rem 0 0;
+    border-style: solid solid none solid; }
+  main .two {
+    border: 1px solid #E0E4E8;
+    border-radius: 0 0 .6rem .6rem; }
+  main .b-style {
+    border: 1px solid #E0E4E8;
+    border-style: solid solid none solid; }
 
 .btn {
   display: flex;
@@ -454,6 +480,7 @@ grid-row:
 display: flex;
 justify-conent:
 */
+
 main {
   display: flex;
   justify-content: center;
@@ -474,3 +501,4 @@ main {
   main .two {
     border: 1px solid #E0E4E8;
     border-radius: 0 0 .6rem .6rem; }
+
