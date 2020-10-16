@@ -319,11 +319,12 @@ main {
     height: 16px;
     margin-bottom: 10px; }
   .journaldetail__motto {
-    width: 315px;
-    height: 62px;
+    width: 275px;
+    height: 24px;
     margin-bottom: 20px;
     border: 1px solid #7589A2;
     border-radius: 5px;
+    padding: 19px 20px;
     font-size: 1.6rem;
     resize: none; }
   .journaldetail__notestitle {
@@ -331,11 +332,12 @@ main {
     height: 16px;
     margin-bottom: 10px; }
   .journaldetail__notes {
-    width: 315px;
-    height: 124px;
+    width: 275px;
+    height: 86px;
     margin-bottom: 30px;
     border: 1px solid #7589A2;
     border-radius: 5px;
+    padding: 19px 20px;
     font-size: 1.6rem;
     resize: none; }
 
@@ -501,4 +503,3 @@ main {
   main .two {
     border: 1px solid #E0E4E8;
     border-radius: 0 0 .6rem .6rem; }
-

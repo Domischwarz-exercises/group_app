@@ -66,11 +66,12 @@
   }
 
   &__motto {
-    width: 315px;
-    height: 62px;
+    width: 275px;
+    height: 24px;
     margin-bottom: 20px;
     border: 1px solid $border-color-2;
     border-radius: 5px;
+    padding: 19px 20px;
     font-size: $semibold16;
     resize: none;
   }
@@ -82,11 +83,12 @@
   }
 
   &__notes {
-    width: 315px;
-    height: 124px;
+    width: 275px;
+    height: 86px;
     margin-bottom: 30px;
     border: 1px solid $border-color-2;
     border-radius: 5px;
+    padding: 19px 20px;
     font-size: $semibold16;
     resize: none;
   }
