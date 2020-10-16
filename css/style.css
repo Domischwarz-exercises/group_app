@@ -34,7 +34,8 @@ body {
 .heading-1 {
   font-size: 1.6rem;
   color: #193251;
-  line-height: 2.4; }
+  line-height: 2.4;
+  padding-top: 0px; }
 
 h2 {
   font-size: 1.4rem;
@@ -228,16 +229,22 @@ h2 {
 
 .waves {
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .waves__heading {
     background-color: #F8F8F8;
-    padding-top: 3rem; }
+    padding-top: 2rem;
+    position: relative; }
   .waves svg {
     height: 6rem;
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    fill: #201818; }
   .waves path {
     stroke: none;
-    fill: #f8f8f8; }
+    fill: #201818; }
 
 .journaldetail {
   width: 315px;
