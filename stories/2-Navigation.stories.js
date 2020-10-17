@@ -1,8 +1,8 @@
 export default {
-    title: 'navigation'
+    title: 'Components/Navigation'
 }
 
-export const Footer = () => `<footer class="nav">
+export const Navigation= () => `<footer class="nav">
 <div class="nav-bar">
     <a href="/index.html"><img src="/img/dashboardIcon.png" alt="" class="nav__image"></a>
 <a href="/code_buddy.html"><img  src="/img/buddyicon.png" alt="" class="nav__image"></a>
