@@ -188,4 +188,3 @@ function goBlueRectangle (one, two, three, four, five, six, seven, eight, nine, 
   nine.src="img/rectangleBlue.png";
   ten.src="img/rectangleBlue.png";
 }
-
