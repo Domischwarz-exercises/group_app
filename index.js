@@ -32,18 +32,21 @@ buddyButton.addEventListener('click', () => {
   resetPages(pagesList);
   codeBuddy.classList.remove('hidden');
   document.querySelector(".head__title").innerText = "Code Buddy";
+  console.log("hii")
 });
 
 teamButton.addEventListener('click', () => {
   resetPages(pagesList);
   team.classList.remove('hidden');
   document.querySelector(".head__title").innerText = "Teams";
+  console.log("hii")
 });
 
 energyButton.addEventListener('click', () => {
   resetPages(pagesList);
   energy.classList.remove('hidden');
   document.querySelector(".head__title").innerText = "Energy";
+  console.log("hii")
 });
 
 journalButton.addEventListener('click', () => {
