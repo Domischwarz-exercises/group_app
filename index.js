@@ -24,6 +24,8 @@ const starTwo = get(".card__startwo");
 const starThree = get(".card__starthree");
 const starFour = get(".card__starfour");
 const starFive = get(".card__starfive");
+const rateTodayForm = get(".journaldetail");
+const saveButton = get(".journaldetail__savebutton");
 
 const rectangleOne = get(".card__rectangleone")
 const rectangleTwo = get(".card__rectangletwo")
@@ -39,7 +41,11 @@ const rectangleTen = get(".card__rectangleten")
 const navigation = [homeButton, buddyButton, teamButton, energyButton, journalButton, detailButton];
 const pagesList = [home, codeBuddy, team, energy, journal, detail];
 const starsList = [starOne, starTwo, starThree, starFour, starFive];
-const rectangleList = [rectangleOne, rectangleTwo, rectangleThree, rectangleFour, rectangleFive, rectangleSix, rectangleSeven, rectangleEight, rectangleNine, rectangleTen]
+const rectangleList = [rectangleOne, rectangleTwo, rectangleThree, rectangleFour, rectangleFive, rectangleSix, rectangleSeven, rectangleEight, rectangleNine, rectangleTen];
+
+saveButton.addEventListener("click", () => {
+  rateTodayForm.reset();
+})
 
 starOne.addEventListener("click", () => {
   goBlueStar(starOne);
