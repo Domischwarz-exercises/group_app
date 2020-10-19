@@ -19,6 +19,7 @@ homeButton.addEventListener('click', () => {
   team.classList.add('hidden');
   energy.classList.add('hidden');
   journal.classList.add('hidden');
+  document.querySelector(".head__title").innerText = "Dashboard";
 });
 
 buddyButton.addEventListener('click', () => {
@@ -27,6 +28,7 @@ buddyButton.addEventListener('click', () => {
     team.classList.add('hidden');
     energy.classList.add('hidden');
     journal.classList.add('hidden');
+    document.querySelector(".head__title").innerText = "Code Buddy";
   });
 
   teamButton.addEventListener('click', () => {
@@ -35,6 +37,7 @@ buddyButton.addEventListener('click', () => {
     team.classList.remove('hidden');
     energy.classList.add('hidden');
     journal.classList.add('hidden');
+    document.querySelector(".head__title").innerText = "Teams";
   });
 
   energyButton.addEventListener('click', () => {
@@ -43,6 +46,7 @@ buddyButton.addEventListener('click', () => {
     team.classList.add('hidden');
     energy.classList.remove('hidden');
     journal.classList.add('hidden');
+    document.querySelector(".head__title").innerText = "Energy";
   });
 
   journalButton.addEventListener('click', () => {
@@ -51,4 +55,5 @@ buddyButton.addEventListener('click', () => {
     team.classList.add('hidden');
     energy.classList.add('hidden');
     journal.classList.remove('hidden');
+    document.querySelector(".head__title").innerText = "Journal";
   });
