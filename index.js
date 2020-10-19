@@ -25,26 +25,31 @@ const pagesList = [home, codeBuddy, team, energy, journal, detail];
 homeButton.addEventListener('click', () => {
   resetPages(pagesList);
   home.classList.remove('hidden');
+  document.querySelector(".head__title").innerText = "Dashboard";
 });
 
 buddyButton.addEventListener('click', () => {
   resetPages(pagesList);
   codeBuddy.classList.remove('hidden');
+  document.querySelector(".head__title").innerText = "Code Buddy";
 });
 
 teamButton.addEventListener('click', () => {
   resetPages(pagesList);
   team.classList.remove('hidden');
+  document.querySelector(".head__title").innerText = "Teams";
 });
 
 energyButton.addEventListener('click', () => {
   resetPages(pagesList);
   energy.classList.remove('hidden');
+  document.querySelector(".head__title").innerText = "Energy";
 });
 
 journalButton.addEventListener('click', () => {
   resetPages(pagesList);
   journal.classList.remove('hidden');
+  document.querySelector(".head__title").textContent = "Journal";
 });
 
 detailButton.addEventListener('click', () => {
@@ -63,4 +68,5 @@ function getAll (selector) {
 function get (selector) {
   return document.querySelector(selector);
 }
+
   
