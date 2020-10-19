@@ -14,45 +14,96 @@ const energyButton = get('.energy-btn');
 const journalButton = get('.journal-btn');
 const detailButton = get('.detail-btn');
 
+const allBigBtns = getAll('.btn__big');
+const allMediumBtns = getAll('.btn__medium');
+const allSmallBtns = getAll('.btn__small');
+const allExtrasBtns = getAll('.btn__extrasmall')
+
 const starOne = get(".card__starone");
 const starTwo = get(".card__startwo");
 const starThree = get(".card__starthree");
 const starFour = get(".card__starfour");
 const starFive = get(".card__starfive");
 
-const allBigBtns = getAll('.btn__big');
-const allMediumBtns = getAll('.btn__medium');
-const allSmallBtns = getAll('.btn__small');
-const allExtrasBtns = getAll('.btn__extrasmall')
+const rectangleOne = get(".card__rectangleone")
+const rectangleTwo = get(".card__rectangletwo")
+const rectangleThree = get(".card__rectanglethree")
+const rectangleFour = get(".card__rectanglefour")
+const rectangleFive = get(".card__rectanglefive")
+const rectangleSix = get(".card__rectanglesix")
+const rectangleSeven = get(".card__rectangleseven")
+const rectangleEight = get(".card__rectangleeight")
+const rectangleNine = get(".card__rectanglenine")
+const rectangleTen = get(".card__rectangleten")
 
 const navigation = [homeButton, buddyButton, teamButton, energyButton, journalButton, detailButton];
 const pagesList = [home, codeBuddy, team, energy, journal, detail];
+const starsList = [starOne, starTwo, starThree, starFour, starFive];
+const rectangleList = [rectangleOne, rectangleTwo, rectangleThree, rectangleFour, rectangleFive, rectangleSix, rectangleSeven, rectangleEight, rectangleNine, rectangleTen]
 
 starOne.addEventListener("click", () => {
-  resetStars();
   goBlueStar(starOne);
 })
 
 starTwo.addEventListener("click", () => {
-  resetStars();
   goBlueStar(starOne, starTwo);
 })
 
 starThree.addEventListener("click", () => {
-  resetStars();
   goBlueStar(starOne, starTwo, starThree);
 })
 
 starFour.addEventListener("click", () => {
-  resetStars();
   goBlueStar(starOne, starTwo, starThree, starFour);
 })
 
 starFive.addEventListener("click", () => {
-  resetStars();
   goBlueStar(starOne, starTwo, starThree, starFour, starFive);
 })
 
+// Rectangle
+rectangleList[0].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0]);
+})
+
+rectangleList[1].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1]);
+})
+
+rectangleList[2].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2]);
+})
+
+rectangleList[3].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3]);
+})
+
+rectangleList[4].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4]);
+})
+
+rectangleList[5].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5]);
+})
+
+rectangleList[6].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6]);
+})
+
+rectangleList[7].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6], rectangleList[7]);
+})
+
+rectangleList[8].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6], rectangleList[7], rectangleList[8]);
+})
+
+rectangleList[9].addEventListener("click", () => {
+  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6], rectangleList[7], rectangleList[8], rectangleList[9]);
+})
+
+
+// Button
 homeButton.addEventListener('click', () => {
   resetPages(pagesList);
   home.classList.remove('hidden');
@@ -102,11 +153,7 @@ function get (selector) {
 }
 
 function resetStars (){
-  starOne.src="img/starGrey.png";
-  starTwo.src="img/starGrey.png";
-  starThree.src="img/starGrey.png";
-  starFour.src="img/starGrey.png";
-  starFive.src="img/starGrey.png";
+  starsList.forEach(star => star.src="img/starGrey.png");
 }
 
 function goBlueStar (one, two, three, four, five){
@@ -117,3 +164,22 @@ function goBlueStar (one, two, three, four, five){
   four.src="img/starBlue.png";
   five.src="img/starBlue.png";
 }
+
+function resetRectangles (){
+  rectangleList.forEach(rectangle => rectangle.src="img/rectangleGrey.png");
+}
+
+function goBlueRectangle (one, two, three, four, five, six, seven, eight, nine, ten){
+  resetRectangles();
+  one.src="img/rectangleBlue.png";
+  two.src="img/rectangleBlue.png";
+  three.src="img/rectangleBlue.png";
+  four.src="img/rectangleBlue.png";
+  five.src="img/rectangleBlue.png";
+  six.src="img/rectangleBlue.png";
+  seven.src="img/rectangleBlue.png";
+  eight.src="img/rectangleBlue.png";
+  nine.src="img/rectangleBlue.png";
+  ten.src="img/rectangleBlue.png";
+}
+
