@@ -25,40 +25,53 @@ const pagesList = [home, codeBuddy, team, energy, journal, detail];
 homeButton.addEventListener('click', () => {
   resetPages(pagesList);
   home.classList.remove('hidden');
-  document.querySelector(".head__title").innerText = "Dashboard";
+  document.querySelector('.head__title').innerText = 'Dashboard';
 });
 
 buddyButton.addEventListener('click', () => {
   resetPages(pagesList);
   codeBuddy.classList.remove('hidden');
+<<<<<<< HEAD
   document.querySelector(".head__title").innerText = "Code Buddy";
   console.log("hii")
+=======
+  document.querySelector('.head__title').innerText = 'Code Buddy';
+>>>>>>> master
 });
 
 teamButton.addEventListener('click', () => {
   resetPages(pagesList);
   team.classList.remove('hidden');
+<<<<<<< HEAD
   document.querySelector(".head__title").innerText = "Teams";
   console.log("hii")
+=======
+  document.querySelector('.head__title').innerText = 'Teams';
+>>>>>>> master
 });
 
 energyButton.addEventListener('click', () => {
   resetPages(pagesList);
   energy.classList.remove('hidden');
+<<<<<<< HEAD
   document.querySelector(".head__title").innerText = "Energy";
   console.log("hii")
+=======
+  document.querySelector('.head__title').innerText = 'Energy';
+>>>>>>> master
 });
 
 journalButton.addEventListener('click', () => {
   resetPages(pagesList);
   journal.classList.remove('hidden');
-  document.querySelector(".head__title").textContent = "Journal";
+  document.querySelector('.head__title').innerText = 'Journal';
 });
 
 detailButton.addEventListener('click', () => {
   resetPages(pagesList);
   detail.classList.remove('hidden');
 })
+
 
 function resetPages(pages) {
   return pages.forEach(page => page.classList.add('hidden'));
