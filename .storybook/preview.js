@@ -1,5 +1,12 @@
-import '../css/style.css'
-
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-}
+import '../css/style.css';
+import '../img/buddyicon.png';
+import '../img/dashboardIcon.png';
+import '../img/energyIcon.png';
+import '../img/journalIcon.png';
+import '../img/plus.png';
+import '../img/rectangleBlue.png';
+import '../img/rectangleGrey.png';
+import '../img/starBlue.png';
+import '../img/starGrey.png';
+import '../img/teamIcon.png';
+import '../img/Plus.svg';
