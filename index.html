@@ -1,636 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="/index.js" defer></script>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="/index.js" defer></script>
 
-    <title class="head__title">Dashboard</title>
-  </head>
-  <body>
-    <!-- SEITE DASHBOARD -->
-    <section class="dashboard js-home">
-      <header class="waves">
-        <h1 class="waves__heading heading-1">Dashboard</h1>
-        <svg
-          class="waves__small"
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z"
-          ></path>
-        </svg>
-      </header>
-      <main>
-        <!-- Code Budy 1-->
-        <div class="buddy">
-          <h2 class="buddy__content--title heading-2-light">
-            Your Code Buddy for Today:
-          </h2>
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <img class="buddy-imagedash" src="/img/Plus.svg" alt="" />
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-        <!-- Team 1-->
-        <div class="buddy">
-          <h2 class="buddy__content--title heading-2">Your current Team:</h2>
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-        <!-- Journal -->
-        <div class="journal">
-          <div class="card">
-            <h3 class="card__date card-grid">YESTERDAY</h3>
-            <h4 class="card__startitle card-grid card-title">Rating:</h4>
-            <div class="card__starcontainer">
-              <img
-                class="card__star--imgblue"
-                src="img/starBlue.png"
-                alt="Black star"
-              />
-              <img
-                class="card__star--imgblue"
-                src="img/starBlue.png"
-                alt="Black star"
-              />
-              <img
-                class="card__star--imgblue"
-                src="img/starBlue.png"
-                alt="Black star"
-              />
-              <img
-                class="card__star--imggrey"
-                src="img/starGrey.png"
-                alt="Grey star"
-              />
-              <img
-                class="card__star--imggrey"
-                src="img/starGrey.png"
-                alt="Grey star"
-              />
-            </div>
-            <h4 class="card__rectangletitle card-grid card-title">
-              Comprehension:
-            </h4>
-            <div class="card__rectanglecontainer card-grid">
-              <img
-                class="card__rectangle--imgblue"
-                src="img/rectangleBlue.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imgblue"
-                src="img/rectangleBlue.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imgblue"
-                src="img/rectangleBlue.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imgblue"
-                src="img/rectangleBlue.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imgblue"
-                src="img/rectangleBlue.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imgblue"
-                src="img/rectangleBlue.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imgblue"
-                src="img/rectangleBlue.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imggrey"
-                src="img/rectangleGrey.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imggrey"
-                src="img/rectangleGrey.png"
-                alt=""
-              />
-              <img
-                class="card__rectangle--imggrey"
-                src="img/rectangleGrey.png"
-                alt=""
-              />
-            </div>
-            <h4 class="card__mottotitle card-grid card-title">Motto:</h4>
-            <h3 class="card__motto card-grid">"Thats life in the city"</h3>
-            <h4 class="card__notetitle card-grid card-title">Notes:</h4>
-            <p class="card__note card-grid">
-              Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo,
-              si mihi. Et quidem se repellere, idque instituit docere sic omne
-              animal, simul atque.
-            </p>
-          </div>
-        </div>
-      </main>
-    </section>
+		<title class="head__title">Dashboard</title>
+	</head>
+	<body>
 
-    <!-- SEITE CODE BUDDY -->
-    <section class="code-buddy js-buddy hidden">
-      <header class="waves">
-        <h1 class="waves__heading heading-1">
-          Code Buddy
-          <br />
-          <span>on Monday — 18.07.2020</span>
-        </h1>
-        <svg
-          class="waves__big"
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z"
-          ></path>
-        </svg>
-      </header>
-      <main>
-        <!-- Code Budy 1-->
-        <div class="buddy">
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <img class="buddy-image" src="/img/Plus.svg" alt="" />
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-        <!-- Code Budy 2-->
-        <div class="buddy">
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <img class="buddy-image" src="/img/Plus.svg" alt="" />
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-        <!-- Code Budy 3-->
-        <div class="buddy">
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <img class="buddy-image" src="/img/Plus.svg" alt="" />
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-        <!-- Code Budy 4-->
-        <div class="buddy">
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <img class="buddy-image" src="/img/Plus.svg" alt="" />
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-        <!-- Code Budy 5-->
-        <div class="buddy">
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <img class="buddy-image" src="/img/Plus.svg" alt="" />
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-      </main>
-    </section>
+		<!-- SEITE DASHBOARD -->	
+		<section class="dashboard js-home">
+			<header class="waves">
+				<h1 class="waves__heading heading-1">Dashboard</h1>
+				<svg class="waves__small" viewBox="0 0 500 150" preserveAspectRatio="none">	
+					<path d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z">
+					</path>
+				</svg>
+			</header>
+			<main>
+				<!-- Code Budy 1-->					
+				<div class="buddy">	
+					<h2 class="buddy__content--title heading-2-light">Your Code Buddy for Today:</h2>				
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class="heading-3">Dominik Schwarz</h3>
+					</div>
+					<img class="buddy-imagedash" src="/img/Plus.svg" alt="">
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+				<!-- Team 1-->				
+				<div class="buddy">	
+					<h2 class="buddy__content--title heading-2">Your current Team:</h2>
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+				<!-- Journal -->
+				<div class="journal">
+					<div class="card">
+						<h3 class="card__date card-grid">YESTERDAY</h3>
+						<h4 class="card__startitle card-grid card-title">Rating:</h4>
+						<div class="card__starcontainer">
+						<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+						<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+						<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+						<img class="card__star--imggrey" src="img/starGrey.png" alt="Grey star" />
+						<img class="card__star--imggrey" src="img/starGrey.png" alt="Grey star" />
+						</div>
+						<h4 class="card__rectangletitle card-grid card-title">Comprehension:</h4>
+						<div class="card__rectanglecontainer card-grid ">
+						<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+						<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+						<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+						<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+						<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+						<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+						<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+						<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+						<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+						<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+						</div>
+						<h4 class="card__mottotitle card-grid card-title">Motto:</h4>
+						<h3 class="card__motto card-grid ">"Thats life in the city"</h3>
+						<h4 class="card__notetitle card-grid card-title">Notes:</h4>
+						<p class="card__note card-grid ">
+						Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
+						mihi. Et quidem se repellere, idque instituit docere sic omne animal,
+						simul atque.
+							</p>
+					</div>
+				</div>
+			</main>
+		</section>			
+				
+		<!-- SEITE CODE BUDDY -->
+		<section class="code-buddy js-buddy hidden">				
+			<header class="waves">
+				<h1 class="waves__heading heading-1">Code Buddy
+					<br>
+					<span>on Monday — 18.07.2020</span>
+				</h1>
+				<svg class="waves__big" viewBox="0 0 500 150" preserveAspectRatio="none">	
+					<path d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z">
+					</path>
+				</svg>				
+			</header>
+			<main>
+				<!-- Code Budy 1-->
+				<div class="buddy">
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class="heading-3">Dominik Schwarz</h3>
+					</div>
+					<img class="buddy-image" src="/img/Plus.svg" alt="">
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+				<!-- Code Budy 2-->
+				<div class="buddy">
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<img class="buddy-image" src="/img/Plus.svg" alt="">
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+				<!-- Code Budy 3-->
+				<div class="buddy">
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<img class="buddy-image" src="/img/Plus.svg" alt="">
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+				<!-- Code Budy 4-->
+				<div class="buddy">
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class="heading-3">Dominik Schwarz</h3>
+					</div>
+					<img class="buddy-image" src="/img/Plus.svg" alt="">
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+				<!-- Code Budy 5-->
+				<div class="buddy">
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<img class="buddy-image" src="/img/Plus.svg" alt="">
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+			</main>		
+		</section>
 
-    <!-- SEITE TEAMS -->
-    <section class="team js-team hidden">
-      <header class="waves">
-        <h1 class="waves__heading heading-1">
-          Teams
-          <br />
-          <span>for Exercise 1</span>
-        </h1>
-        <svg
-          class="waves__big"
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z"
-          ></path>
-        </svg>
-      </header>
-      <main>
-        <!-- Team 1-->
-        <div class="buddy">
-          <h2 class="buddy__content--title heading-2">Team 1</h2>
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-        <!-- Team 2-->
-        <div class="buddy">
-          <h2 class="buddy__content--title heading-2">Team 2</h2>
-          <!--Name-->
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content b-style bookmark">
-            <h3 class="heading-3">Dominik Schwarz</h3>
-          </div>
-          <!--Name-->
-          <div class="buddy__content two bookmark">
-            <h3 class="buddy__content--title heading-3">Dominik Schwarz</h3>
-          </div>
-        </div>
-      </main>
-    </section>
+		<!-- SEITE TEAMS -->
+		<section class="team js-team hidden">
+			<header class="waves">
+				<h1 class="waves__heading heading-1">Teams
+					<br>
+					<span>for Exercise 1</span>
+				</h1>
+				<svg class="waves__big" viewBox="0 0 500 150" preserveAspectRatio="none">	
+					<path d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z">
+					</path>
+				</svg>				
+			</header>
+			<main>
+				<!-- Team 1-->				
+				<div class="buddy">	
+					<h2 class="buddy__content--title heading-2">Team 1</h2>				
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>
+				<!-- Team 2-->				
+				<div class="buddy">	
+					<h2 class="buddy__content--title heading-2">Team 2</h2>				
+					<!--Name-->
+					<div class="buddy__content one bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content b-style bookmark">
+						<h3 class=" heading-3">Dominik Schwarz</h3>
+					</div>
+					<!--Name-->
+					<div class="buddy__content two bookmark">
+						<h3 class="buddy__content--title heading-3">Dominik Schwarz</h3>
+					</div>
+				</div>				
+			</main>
+		</section>
 
-    <!-- ENERGY -->
-    <section class="team js-energy hidden">
-      <header class="waves">
-        <h1 class="waves__heading heading-1">Energy</h1>
-        <svg
-          class="waves__small"
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z"
-          ></path>
-        </svg>
-      </header>
+		<!-- ENERGY -->
+		<section class="team js-energy hidden">
+			<header class="waves">
+				<h1 class="waves__heading heading-1">Energy</h1>
+				<svg class="waves__small" viewBox="0 0 500 150" preserveAspectRatio="none">	
+					<path d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z">
+					</path>
+				</svg>				
+			</header>
+		  
+			  <main>		
+				<section class="graph">				
+					<h2 class="graph__title heading-2">Energy Level throughout the day</h2>
+					<figure class="graph__container">
+						<span class="graph__yaxis graph-y1">100</span>
+						<span class="graph__yaxis graph-y2">75</span>
+						<span class="graph__yaxis graph-y3">50</span>
+						<span class="graph__yaxis graph-y4">25</span>
+						<span class="graph__yaxis graph-y5">0</span>
+						<div class="bar">
+							<div class="graph__barorange bar-1"></div>
+							<div class="graph__barblue bar-2"></div>
+						</div>
+						<div class="bar">
+							<div class="graph__barorange bar-3"></div>
+							<div class="graph__barblue bar-4"></div>
+						</div>
+						<div class="bar">
+							<div class="graph__barorange bar-5"></div>
+							<div class="graph__barblue bar-6"></div>
+						</div>
+						<div class="bar">
+							<div class="graph__barorange bar-7"></div>
+							<div class="graph__barblue bar-8"></div>
+						</div>
+						<div class="bar">
+							<div class="graph__barorange bar-9"></div>
+							<div class="graph__barblue bar-10"></div>
+						</div>
+						<span class="graph__xaxis graph-x1">10:00</span>
+						<span class="graph__xaxis graph-x2">15:30</span>
+						<span class="graph__xaxis graph-x3">16:15</span>
+						<span class="graph__xaxis graph-x4">18:25</span>
+						<span class="graph__xaxis graph-x5">19:00</span>
+					</figure>
+					<div class="minibtncontainer">
+						<button class="btn__extrasmall btn-blue">Other students</button>
+						<button class="btn__extrasmall btn-verylightorange">You</button>
+					</div>
+				</section>
+	
+				<section class="rateenergy">
+					<h2 class="rateenergy__header heading-2">Rate your current energy level:</h2>
+					<div class="btn">
+						<button class="btn__big btn-orange">100%</button>
+						<button class="btn__big btn-mediumorange">75%</button>
+						<button class="btn__big btn-lightorange">50%</button>
+						<button class="btn__big btn-verylightorange">25%</button>
+					</div>
+				</section>
+			</main>
+		</section>
 
-      <main>
-        <section class="graph">
-          <h2 class="graph__title heading-2">
-            Energy Level throughout the day
-          </h2>
-          <figure class="graph__container">
-            <span class="graph__yaxis graph-y1">100</span>
-            <span class="graph__yaxis graph-y2">75</span>
-            <span class="graph__yaxis graph-y3">50</span>
-            <span class="graph__yaxis graph-y4">25</span>
-            <span class="graph__yaxis graph-y5">0</span>
-            <div class="bar">
-              <div class="graph__barorange bar-1"></div>
-              <div class="graph__barblue bar-2"></div>
-            </div>
-            <div class="bar">
-              <div class="graph__barorange bar-3"></div>
-              <div class="graph__barblue bar-4"></div>
-            </div>
-            <div class="bar">
-              <div class="graph__barorange bar-5"></div>
-              <div class="graph__barblue bar-6"></div>
-            </div>
-            <div class="bar">
-              <div class="graph__barorange bar-7"></div>
-              <div class="graph__barblue bar-8"></div>
-            </div>
-            <div class="bar">
-              <div class="graph__barorange bar-9"></div>
-              <div class="graph__barblue bar-10"></div>
-            </div>
-            <span class="graph__xaxis graph-x1">10:00</span>
-            <span class="graph__xaxis graph-x2">15:30</span>
-            <span class="graph__xaxis graph-x3">16:15</span>
-            <span class="graph__xaxis graph-x4">18:25</span>
-            <span class="graph__xaxis graph-x5">19:00</span>
-          </figure>
-          <div class="minibtncontainer">
-            <button class="btn__extrasmall btn-blue">Other students</button>
-            <button class="btn__extrasmall btn-verylightorange">You</button>
-          </div>
-        </section>
+		<!-- JOURNAL -->
+		<section class="team js-journal hidden">
+			<header class="waves">
+				<h1 class="waves__heading heading-1">Journal</h1>
+				<svg class="waves__small" viewBox="0 0 500 150" preserveAspectRatio="none">	
+					<path d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z">
+					</path>
+				</svg>				
+      		</header>
+      
+			<div class="journal">
+				<a  href="journal_detail.html">
+					<button class="btn__orange--middle">
+					Rate Today *
+					<img class="btn__img" src="" alt="" />
+					</button>
+				</a>
+				<div class="card">
+					<h3 class="card__date card-grid">YESTERDAY</h3>
+					<h4 class="card__startitle card-grid card-title">Rating:</h4>
+					<div class="card__starcontainer">
+					<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+					<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+					
+					<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+					<img class="card__star--imggrey" src="img/starGrey.png" alt="Grey star" />
+					<img class="card__star--imggrey" src="img/starGrey.png" alt="Grey star" />
+					</div>
+					
+					<h4 class="card__rectangletitle card-grid card-title">Comprehension:</h4>
+					<div class="card__rectanglecontainer card-grid ">
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+					<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+					<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+					</div>
+					<h4 class="card__mottotitle card-grid card-title">Motto:</h4>
+					<h3 class="card__motto card-grid ">"Thats life in the city"</h3>
+					<h4 class="card__notetitle card-grid card-title">Notes:</h4>
+					<p class="card__note card-grid ">
+					Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
+					mihi. Et quidem se repellere, idque instituit docere sic omne animal,
+					simul atque.
+					</p>
+				</div>
 
-        <section class="rateenergy">
-          <h2 class="rateenergy__header heading-2">
-            Rate your current energy level:
-          </h2>
-          <div class="btn">
-            <button class="btn__big btn-orange">100%</button>
-            <button class="btn__big btn-mediumorange">75%</button>
-            <button class="btn__big btn-lightorange">50%</button>
-            <button class="btn__big btn-verylightorange">25%</button>
-          </div>
-        </section>
-      </main>
-    </section>
+				<div class="card">
+					<h3 class="card__date card-grid">12.07.2020</h3>
+					<h4 class="card__startitle card-grid card-title">Rating:</h4>
+					<div class="card__starcontainer">
+					<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+					<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+					
+					<img class="card__star--imgblue" src="img/starBlue.png" alt="Black star" />
+					<img class="card__star--imggrey" src="img/starGrey.png" alt="Grey star" />
+					<img class="card__star--imggrey" src="img/starGrey.png" alt="Grey star" />
+					</div>
+					
+					<h4 class="card__rectangletitle card-grid card-title">Comprehension:</h4>
+					<div class="card__rectanglecontainer card-grid ">
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imgblue" src="img/rectangleBlue.png" alt="" />
+					<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+					<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+					<img class="card__rectangle--imggrey" src="img/rectangleGrey.png" alt="" />
+					</div>
+					<h4 class="card__mottotitle card-grid card-title">Motto:</h4>
+					<h3 class="card__motto card-grid ">"One step at a time"</h3>
+					<h4 class="card__notetitle card-grid card-title">Notes:</h4>
+					<p class="card__note card-grid ">
+					Torquatos nostros quos dolores suscipiantur maiorum
+					</p>
+				</div>				
+			</div>
+		</section>
 
-    <!-- JOURNAL -->
-    <section class="team js-journal hidden">
-      <header class="waves">
-        <h1 class="waves__heading heading-1">Journal</h1>
-        <svg
-          class="waves__small"
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0.00,127.78 C173.81,209.70 228.55,0.50 501.12,139.63 L500.00,0.00 L0.00,0.00 Z"
-          ></path>
-        </svg>
-      </header>
-
-      <div class="journal">
-        <a href="journal_detail.html">
-          <button class="btn__orange--middle">
-            Rate Today *
-            <img class="btn__img" src="" alt="" />
-          </button>
-        </a>
-        <div class="card">
-          <h3 class="card__date card-grid">YESTERDAY</h3>
-          <h4 class="card__startitle card-grid card-title">Rating:</h4>
-          <div class="card__starcontainer">
-            <img
-              class="card__star--imgblue"
-              src="img/starBlue.png"
-              alt="Black star"
-            />
-            <img
-              class="card__star--imgblue"
-              src="img/starBlue.png"
-              alt="Black star"
-            />
-
-            <img
-              class="card__star--imgblue"
-              src="img/starBlue.png"
-              alt="Black star"
-            />
-            <img
-              class="card__star--imggrey"
-              src="img/starGrey.png"
-              alt="Grey star"
-            />
-            <img
-              class="card__star--imggrey"
-              src="img/starGrey.png"
-              alt="Grey star"
-            />
-          </div>
-
-          <h4 class="card__rectangletitle card-grid card-title">
-            Comprehension:
-          </h4>
-          <div class="card__rectanglecontainer card-grid">
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imggrey"
-              src="img/rectangleGrey.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imggrey"
-              src="img/rectangleGrey.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imggrey"
-              src="img/rectangleGrey.png"
-              alt=""
-            />
-          </div>
-          <h4 class="card__mottotitle card-grid card-title">Motto:</h4>
-          <h3 class="card__motto card-grid">"Thats life in the city"</h3>
-          <h4 class="card__notetitle card-grid card-title">Notes:</h4>
-          <p class="card__note card-grid">
-            Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
-            mihi. Et quidem se repellere, idque instituit docere sic omne
-            animal, simul atque.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="card__date card-grid">12.07.2020</h3>
-          <h4 class="card__startitle card-grid card-title">Rating:</h4>
-          <div class="card__starcontainer">
-            <img
-              class="card__star--imgblue"
-              src="img/starBlue.png"
-              alt="Black star"
-            />
-            <img
-              class="card__star--imgblue"
-              src="img/starBlue.png"
-              alt="Black star"
-            />
-
-            <img
-              class="card__star--imgblue"
-              src="img/starBlue.png"
-              alt="Black star"
-            />
-            <img
-              class="card__star--imggrey"
-              src="img/starGrey.png"
-              alt="Grey star"
-            />
-            <img
-              class="card__star--imggrey"
-              src="img/starGrey.png"
-              alt="Grey star"
-            />
-          </div>
-
-          <h4 class="card__rectangletitle card-grid card-title">
-            Comprehension:
-          </h4>
-          <div class="card__rectanglecontainer card-grid">
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imgblue"
-              src="img/rectangleBlue.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imggrey"
-              src="img/rectangleGrey.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imggrey"
-              src="img/rectangleGrey.png"
-              alt=""
-            />
-            <img
-              class="card__rectangle--imggrey"
-              src="img/rectangleGrey.png"
-              alt=""
-            />
-          </div>
-          <h4 class="card__mottotitle card-grid card-title">Motto:</h4>
-          <h3 class="card__motto card-grid">"One step at a time"</h3>
-          <h4 class="card__notetitle card-grid card-title">Notes:</h4>
-          <p class="card__note card-grid">
-            Torquatos nostros quos dolores suscipiantur maiorum
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--Footer Navigation-->
-    <footer class="nav">
-      <div class="nav-bar">
-        <a
-          ><img src="/img/dashboardIcon.png" alt="" class="nav__image home-btn"
-        /></a>
-        <a
-          ><img src="/img/buddyicon.png" alt="" class="nav__image buddy-btn"
-        /></a>
-        <a
-          ><img src="/img/teamicon.png" alt="" class="nav__image team-btn"
-        /></a>
-        <a
-          ><img src="/img/energyicon.png" alt="" class="nav__image energy-btn"
-        /></a>
-        <a
-          ><img
-            src="/img/journalicon.png"
-            alt=""
-            class="nav__image journal-btn"
-        /></a>
-      </div>
-    </footer>
-  </body>
+		<!--Footer Navigation-->
+		<footer class="nav">
+			<div class="nav-bar">
+			<a ><img src="/img/dashboardIcon.png" alt="" class="nav__image home-btn"></a>
+			<a ><img  src="/img/buddyicon.png" alt="" class="nav__image buddy-btn"></a>
+			<a ><img src="/img/teamicon.png" alt="" class="nav__image team-btn"></a>
+			<a ><img src="/img/energyicon.png" alt="" class="nav__image energy-btn"></a>
+			<a ><img src="/img/journalicon.png" alt="" class="nav__image journal-btn"></a>
+			</div>								
+		</footer>
+		
+	</body>
 </html>
