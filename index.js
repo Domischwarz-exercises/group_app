@@ -55,5 +55,7 @@ buddyButton.addEventListener('click', () => {
     team.classList.add('hidden');
     energy.classList.add('hidden');
     journal.classList.remove('hidden');
-    document.querySelector(".head__title").innerText = "Journal";
+    document.querySelector(".head__title").textContent = "Journal";
   });
+
+  
