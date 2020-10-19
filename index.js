@@ -1,54 +1,66 @@
 /////////////////////////////////////////////
 // NAVIGATION SINGLE PAGE
-const home = document.querySelector('.js-home');
-const codeBuddy = document.querySelector('.js-buddy');
-const team = document.querySelector('.js-team');
-const energy = document.querySelector('.js-energy');
-const journal = document.querySelector('.js-journal');
+const home = get('.js-home');
+const codeBuddy = get('.js-buddy');
+const team = get('.js-team');
+const energy = get('.js-energy');
+const journal = get('.js-journal');
+const detail = get('.js-detail')
 
-const homeButton = document.querySelector('.home-btn');
-const buddyButton = document.querySelector('.buddy-btn');
-const teamButton = document.querySelector('.team-btn');
-const energyButton = document.querySelector('.energy-btn');
-const journalButton = document.querySelector('.journal-btn');
+const homeButton = get('.home-btn');
+const buddyButton = get('.buddy-btn');
+const teamButton = get('.team-btn');
+const energyButton = get('.energy-btn');
+const journalButton = get('.journal-btn');
+const detailButton = get('.detail-btn')
 
+const allBigBtns = getAll('.btn__big');
+const allMediumBtns = getAll('.btn__medium');
+const allSmallBtns = getAll('.btn__small');
+const allExtrasBtns = getAll('.btn__extrasmall')
+
+const navigation = [homeButton, buddyButton, teamButton, energyButton, journalButton, detailButton];
+const pagesList = [home, codeBuddy, team, energy, journal, detail];
 
 homeButton.addEventListener('click', () => {
+  resetPages(pagesList);
   home.classList.remove('hidden');
-  codeBuddy.classList.add('hidden');
-  team.classList.add('hidden');
-  energy.classList.add('hidden');
-  journal.classList.add('hidden');
 });
 
 buddyButton.addEventListener('click', () => {
-    home.classList.add('hidden');
-    codeBuddy.classList.remove('hidden');
-    team.classList.add('hidden');
-    energy.classList.add('hidden');
-    journal.classList.add('hidden');
-  });
+  resetPages(pagesList);
+  codeBuddy.classList.remove('hidden');
+});
 
-  teamButton.addEventListener('click', () => {
-    home.classList.add('hidden');
-    codeBuddy.classList.add('hidden');
-    team.classList.remove('hidden');
-    energy.classList.add('hidden');
-    journal.classList.add('hidden');
-  });
+teamButton.addEventListener('click', () => {
+  resetPages(pagesList);
+  team.classList.remove('hidden');
+});
 
-  energyButton.addEventListener('click', () => {
-    home.classList.add('hidden');
-    codeBuddy.classList.add('hidden');
-    team.classList.add('hidden');
-    energy.classList.remove('hidden');
-    journal.classList.add('hidden');
-  });
+energyButton.addEventListener('click', () => {
+  resetPages(pagesList);
+  energy.classList.remove('hidden');
+});
 
-  journalButton.addEventListener('click', () => {
-    home.classList.add('hidden');
-    codeBuddy.classList.add('hidden');
-    team.classList.add('hidden');
-    energy.classList.add('hidden');
-    journal.classList.remove('hidden');
-  });
+journalButton.addEventListener('click', () => {
+  resetPages(pagesList);
+  journal.classList.remove('hidden');
+});
+
+detailButton.addEventListener('click', () => {
+  resetPages(pagesList);
+  detail.classList.remove('hidden');
+})
+
+function resetPages(pages) {
+  return pages.forEach(page => page.classList.add('hidden'));
+}
+
+function getAll (selector) {
+  return document.querySelectorAll(selector);
+}
+
+function get (selector) {
+  return document.querySelector(selector);
+}
+  
