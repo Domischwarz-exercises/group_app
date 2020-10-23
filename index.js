@@ -128,15 +128,23 @@ function codeBuddiesSection (inputAPI) {
   const sectionBuddy = get('.buddies__container');
   const elDiv = document.createElement('div');
   sectionBuddy.appendChild(elDiv);
-  elDiv.classList.add("buddy")
-  elDiv.innerHTML = `
-  <div class="buddy__content one bookmark">
-  <h3 class="heading-3">${inputAPI[0]}</h3>
-  </div>
-  <img class="buddy-image" src="/img/Plus.svg" alt="" />
-  <div class="buddy__content two bookmark">
-  <h3 class="heading-3">${inputAPI[1]}</h3>
-  `;
+  elDiv.classList.add("buddy");
+  
+  inputAPI.forEach(function testCase(input, i) {
+    switch (true) {
+    case (i === 0) :
+      elDiv.innerHTML += `
+          <div class="buddy__content one bookmark">
+          <h3 class="heading-3">${input}</h3>
+          </div>`;
+      break;
+    default :
+      elDiv.innerHTML += `
+          <div class="buddy__content two bookmark">
+          <h3 class="heading-3">${input}</h3>
+          </div>`;
+    }
+  });
 }
 
 /////////////////////////////
@@ -148,21 +156,21 @@ fetchAPI(teamsAPI, teamsSection)
 
 function teamsSection (inputAPI) {
   const sectionTeam = get('.teams__container');
-  const elDiv = document.createElement('div');
+  const elDiv = create('div');
   sectionTeam.appendChild(elDiv);
   elDiv.classList.add("buddy")
-  elDiv.innerHTML = `
-  <h2 class="buddy__content--title heading-2">Team 1</h2>
-  <div class="buddy__content one bookmark">
-    <h3 class="heading-3">${inputAPI[0]}</h3>
-  </div>
-  <div class="buddy__content b-style bookmark">
-    <h3 class="heading-3">${inputAPI[1]}</h3>
-  </div>
-  <div class="buddy__content b-style bookmark">
-    <h3 class="heading-3">${inputAPI[2]}</h3>
+  inputAPI.forEach(person => {
+   let loopResult = `
+  <div class="buddy__content bookmark">
+    <h3 class="heading-3">${person}</h3>
   </div>
   `;
+  elDiv.InnerHTML += loopResult
+ 
+})
 }
 
-  
+function create(input) {
+  return document.createElement(input)
+}
+//<h2 class="buddy__content--title heading-2">Team ${counter}</h2>
