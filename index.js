@@ -111,63 +111,58 @@ function loadFromStorageList(name) {
 ///CODE BUDDES API
 
 const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
-const buddyHTML = `
-<div class="buddy__content one bookmark">
-<h3 class="heading-3">lol</h3>
-</div>
-<img class="buddy-image" src="/img/Plus.svg" alt="" />
-<div class="buddy__content two bookmark">
-<h3 class="heading-3">lol2</h3>
-`
 
-//const codeBuddies = fetchAPI(codeBuddiesAPI)
+fetchAPI(codeBuddiesAPI, codeBuddiesSection)
 
-async function fetchAPI(http) {
+async function fetchAPI(http, htmlCreator) {
   try {
-    const result = await fetch(http, {headers: {'Access-Control-Allow-Origin': http}})
-    const data = await result.json()
-    console.log(data)
+    const result = await fetch(http);
+    const data = await result.json();
+    data.forEach(pair => htmlCreator(pair));
   } catch (error) {
-    console.error(error.message)
+    console.error(error.message);
   }
 }
 
-function codeBuddiesSection (input) {
-  const elDiv = document.createElement('div');
+function codeBuddiesSection (inputAPI) {
   const sectionBuddy = get('.buddies__container');
+  const elDiv = document.createElement('div');
   sectionBuddy.appendChild(elDiv);
   elDiv.classList.add("buddy")
-  elDiv.innerHTML = input;
+  elDiv.innerHTML = `
+  <div class="buddy__content one bookmark">
+  <h3 class="heading-3">${inputAPI[0]}</h3>
+  </div>
+  <img class="buddy-image" src="/img/Plus.svg" alt="" />
+  <div class="buddy__content two bookmark">
+  <h3 class="heading-3">${inputAPI[1]}</h3>
+  `;
 }
-
-codeBuddiesSection(buddyHTML)
-codeBuddiesSection(buddyHTML)
-codeBuddiesSection(buddyHTML)
 
 /////////////////////////////
 //CODE TEAMS
 
-const teamsHTML = `
-<h2 class="buddy__content--title heading-2">Team 1</h2>
-<!--Name-->
-<div class="buddy__content one bookmark">
-  <h3 class="heading-3">Dominik Schwarz</h3>
-</div>
-<!--Name-->
-<div class="buddy__content b-style bookmark">
-  <h3 class="heading-3">Dominik Schwarz</h3>
-</div>
-<!--Name-->
-<div class="buddy__content b-style bookmark">
-  <h3 class="heading-3">Dominik Schwarz</h3>
-</div>
-<!--Name-->
-<div class="buddy__content b-style bookmark">
-  <h3 class="heading-3">Dominik Schwarz</h3>
-</div>
-<!--Name-->
-<div class="buddy__content two bookmark">
-  <h3 class="heading-3">Dominik Schwarz</h3>
-</div>`
+const teamsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/teams'
+
+fetchAPI(teamsAPI, teamsSection)
+
+function teamsSection (inputAPI) {
+  const sectionTeam = get('.teams__container');
+  const elDiv = document.createElement('div');
+  sectionTeam.appendChild(elDiv);
+  elDiv.classList.add("buddy")
+  elDiv.innerHTML = `
+  <h2 class="buddy__content--title heading-2">Team 1</h2>
+  <div class="buddy__content one bookmark">
+    <h3 class="heading-3">${inputAPI[0]}</h3>
+  </div>
+  <div class="buddy__content b-style bookmark">
+    <h3 class="heading-3">${inputAPI[1]}</h3>
+  </div>
+  <div class="buddy__content b-style bookmark">
+    <h3 class="heading-3">${inputAPI[2]}</h3>
+  </div>
+  `;
+}
 
   
