@@ -105,4 +105,22 @@ function loadFromStorageList(name) {
    }
  }
 
+ //CODE BUDDES API
+const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
+
+const codeBuddies = fetchAPI(codeBuddiesAPI)
+console.log(codeBuddies)
+
+async function fetchAPI(info) {
+  try {
+    const result = await fetch(info, {headers: {'Access-Control-Allow-Origin': info}})
+    const data = await result.json()
+    console.log(data)
+  } catch (error) {
+    console.error(error.message)
+  }
+}
+
+
+
   
