@@ -70,6 +70,7 @@ function get (selector) {
   return document.querySelector(selector);
 }
 
+///////////////
 //LOCALSTORAGE
 
 const form = document.querySelector('form');
@@ -103,17 +104,27 @@ function loadFromStorageList(name) {
    } catch(error) {
      console.log(error.message);
    }
- }
+}
 
- //CODE BUDDES API
+
+///////////////////
+///CODE BUDDES API
+
 const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
+const buddyHTML = `
+<div class="buddy__content one bookmark">
+<h3 class="heading-3">lol</h3>
+</div>
+<img class="buddy-image" src="/img/Plus.svg" alt="" />
+<div class="buddy__content two bookmark">
+<h3 class="heading-3">lol2</h3>
+`
 
-const codeBuddies = fetchAPI(codeBuddiesAPI)
-console.log(codeBuddies)
+//const codeBuddies = fetchAPI(codeBuddiesAPI)
 
-async function fetchAPI(info) {
+async function fetchAPI(http) {
   try {
-    const result = await fetch(info, {headers: {'Access-Control-Allow-Origin': info}})
+    const result = await fetch(http, {headers: {'Access-Control-Allow-Origin': http}})
     const data = await result.json()
     console.log(data)
   } catch (error) {
@@ -121,6 +132,42 @@ async function fetchAPI(info) {
   }
 }
 
+function codeBuddiesSection (input) {
+  const elDiv = document.createElement('div');
+  const sectionBuddy = get('.buddies__container');
+  sectionBuddy.appendChild(elDiv);
+  elDiv.classList.add("buddy")
+  elDiv.innerHTML = input;
+}
 
+codeBuddiesSection(buddyHTML)
+codeBuddiesSection(buddyHTML)
+codeBuddiesSection(buddyHTML)
+
+/////////////////////////////
+//CODE TEAMS
+
+const teamsHTML = `
+<h2 class="buddy__content--title heading-2">Team 1</h2>
+<!--Name-->
+<div class="buddy__content one bookmark">
+  <h3 class="heading-3">Dominik Schwarz</h3>
+</div>
+<!--Name-->
+<div class="buddy__content b-style bookmark">
+  <h3 class="heading-3">Dominik Schwarz</h3>
+</div>
+<!--Name-->
+<div class="buddy__content b-style bookmark">
+  <h3 class="heading-3">Dominik Schwarz</h3>
+</div>
+<!--Name-->
+<div class="buddy__content b-style bookmark">
+  <h3 class="heading-3">Dominik Schwarz</h3>
+</div>
+<!--Name-->
+<div class="buddy__content two bookmark">
+  <h3 class="heading-3">Dominik Schwarz</h3>
+</div>`
 
   
