@@ -129,19 +129,19 @@ function codeBuddiesSection (inputAPI) {
   const elDiv = document.createElement('div');
   sectionBuddy.appendChild(elDiv);
   elDiv.classList.add("buddy");
-  
-  inputAPI.forEach(function testCase(input, i) {
+
+  inputAPI.forEach(function forEachPerson(input, i) {
     switch (true) {
     case (i === 0) :
       elDiv.innerHTML += `
           <div class="buddy__content one bookmark">
-          <h3 class="heading-3">${input}</h3>
+            <h3 class="heading-3">${input}</h3>
           </div>`;
       break;
     default :
       elDiv.innerHTML += `
           <div class="buddy__content two bookmark">
-          <h3 class="heading-3">${input}</h3>
+            <h3 class="heading-3">${input}</h3>
           </div>`;
     }
   });
@@ -158,16 +158,29 @@ function teamsSection (inputAPI) {
   const sectionTeam = get('.teams__container');
   const elDiv = create('div');
   sectionTeam.appendChild(elDiv);
-  elDiv.classList.add("buddy")
-  inputAPI.forEach(person => {
-   let loopResult = `
-  <div class="buddy__content bookmark">
-    <h3 class="heading-3">${person}</h3>
-  </div>
-  `;
-  elDiv.InnerHTML += loopResult
- 
-})
+  elDiv.classList.add("buddy");
+
+  inputAPI.forEach(function forEachPerson(input, i) {
+    switch (true) {
+      case (i === 0): 
+        elDiv.innerHTML += `
+            <div class="buddy__content one bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div> `;
+        break;
+      case (i === 1): 
+        elDiv.innerHTML += `
+            <div class="buddy__content b-style bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div> `;
+        break;
+      default:
+        elDiv.innerHTML += `
+            <div class="buddy__content two bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div> `;
+      }
+    })
 }
 
 function create(input) {
