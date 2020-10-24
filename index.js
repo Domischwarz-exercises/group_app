@@ -24,6 +24,7 @@ const journalButton = get('.journal-btn');
 const detailButton = get('.detail-btn');
 // BUTTON TO SAVE FORMULAR
 const detailSaveButton = get(".journaldetail__savebutton")
+const detailCancelButton = get(".journaldetail__cancelbutton")
 
 
 const allBigBtns = getAll('.btn__big');
@@ -77,6 +78,31 @@ detailButton.addEventListener('click', () => {
 })
 
 
+// RESET THE FORMULAR ON JOURNAL DETAIL
+
+detailSaveButton.addEventListener("click", () => {
+  rateTodayForm.reset();
+  starContainer.forEach(star => star.src = "img/starGrey.png");
+  rectangleContainer.forEach(rectangle => rectangle.src = "img/rectangleGrey.png");
+  resetPages(pagesList)
+  journal.classList.remove("hidden");
+  headTitle.innerText="Journal"
+})
+
+
+// CANCEL THE FORMULAR ON JOURNAL DETAIL
+
+detailCancelButton.addEventListener("click", () => {
+
+  rateTodayForm.reset();
+  starContainer.forEach(star => star.src = "img/starGrey.png");
+  rectangleContainer.forEach(rectangle => rectangle.src = "img/rectangleGrey.png");
+  resetPages(pagesList)
+  journal.classList.remove("hidden");
+  headTitle.innerText="Journal"
+})
+
+
 // JOURNAL DETAIL RATE STARS LOGIC
 
 starContainer.forEach((img, index) =>{
@@ -98,13 +124,6 @@ rectangleContainer.forEach((img, index) =>{
       rectangleContainer[i].src="img/rectangleBlue.png"; 
     }
   })
-})
-
-
-// RESET THE FORMULAR ON JOURNAL DETAIL
-
-detailSaveButton.addEventListener("click", () => {
-  rateTodayForm.reset();
 })
 
 
