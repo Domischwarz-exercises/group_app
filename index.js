@@ -6,6 +6,7 @@ const team = get('.js-team');
 const energy = get('.js-energy');
 const journal = get('.js-journal');
 const detail = get('.js-detail')
+const rateTodayForm = get(".journaldetail")
 
 const homeButton = get('.home-btn');
 const buddyButton = get('.buddy-btn');
@@ -13,25 +14,24 @@ const teamButton = get('.team-btn');
 const energyButton = get('.energy-btn');
 const journalButton = get('.journal-btn');
 const detailButton = get('.detail-btn');
+const detailSaveButton = get(".journaldetail__savebutton")
 
 const allBigBtns = getAll('.btn__big');
 const allMediumBtns = getAll('.btn__medium');
 const allSmallBtns = getAll('.btn__small');
 const allExtrasBtns = getAll('.btn__extrasmall')
 
-const starContainer = document.querySelectorAll(".journaldetail__starcontainer > img")
-const rectangleContainer = document.querySelectorAll("journaldetail__rectanglecontainer > img")
+const starContainer = getAll(".journaldetail__starcontainer > img")
+const rectangleContainer = getAll(".journaldetail__rectanglecontainer > img")
 
 
 
 const navigation = [homeButton, buddyButton, teamButton, energyButton, journalButton, detailButton];
 const pagesList = [home, codeBuddy, team, energy, journal, detail];
-/*
-saveButton.addEventListener("click", () => {
+
+detailSaveButton.addEventListener("click", () => {
   rateTodayForm.reset();
-})*/
-
-
+})
 
 
 // Button
