@@ -6,21 +6,23 @@ const team = get('.js-team');
 const energy = get('.js-energy');
 const journal = get('.js-journal');
 const detail = get('.js-detail')
+// LIST OF EVERY SINGLE PAGE
+const pagesList = getAll("body > section")
 
-// Detail formular
+// JOURNAL DETAIL FORMULAR
 const rateTodayForm = get(".journaldetail")
 
-// Head-Title
+// HEAD-TITLE OF EVERY SINGLE PAGE
 const headTitle = get(".head__title")
-// Nav Buttons
+// NAV BUTTONS
 const homeButton = get('.home-btn');
 const buddyButton = get('.buddy-btn');
 const teamButton = get('.team-btn');
 const energyButton = get('.energy-btn');
 const journalButton = get('.journal-btn');
-// Button to Journal Detail
+// BUTTON TO JOURNAL DETAIL PAGE
 const detailButton = get('.detail-btn');
-// Save formular button
+// BUTTON TO SAVE FORMULAR
 const detailSaveButton = get(".journaldetail__savebutton")
 
 
@@ -33,37 +35,37 @@ const starContainer = getAll(".journaldetail__starcontainer > img")
 
 const rectangleContainer = getAll(".journaldetail__rectanglecontainer > img")
 const navigationList = getAll(".nav-bar > a")
-const pagesList = getAll("body > section")
 
 
 
 
 
-// Nav Logic
+
+// NAV LOGIC
 navigationList.forEach((anchor, index) => {
   anchor.addEventListener("click", () => {
     resetPages(pagesList);
-    // To Home
+    // GO TO HOME PAGE
     if(index === 0){
       home.classList.remove("hidden");
       headTitle.innerText="Dashboard";
     }
-    // To Code Buddy
+    // GO TO CODE-BUDDY PAGE
     else if(index === 1){
       codeBuddy.classList.remove("hidden");
       headTitle.innerText="Code Buddy"
     }
-    // To Team
+    // GOT TO TEAM PAGE
     else if(index === 2){
       team.classList.remove("hidden");
       headTitle.innerText="Teams"
     }
-    // To Energy
+    // GOT TO ENERGY PAGE
     else if(index === 3){
       energy.classList.remove("hidden");
       headTitle.innerText="Energy"
     }
-    // To Journal
+    // GOT TO JOURNAL PAGE
     else if(index === 4){
       journal.classList.remove("hidden");
       headTitle.innerText="Journal"
@@ -72,7 +74,7 @@ navigationList.forEach((anchor, index) => {
 })
 
 
-// To Journal Detail
+// GO TO JOURNAL DETAIL PAGE
 
 detailButton.addEventListener('click', () => {
   resetPages(pagesList);
@@ -80,7 +82,7 @@ detailButton.addEventListener('click', () => {
 })
 
 
-// Journal Detail Star Logic
+// JOURNAL DETAIL RATE STARS LOGIC
 
 starContainer.forEach((img, index) =>{
   img.addEventListener("click", () => {
@@ -92,7 +94,7 @@ starContainer.forEach((img, index) =>{
 })
 
 
-// Journal Detail Rectangle Logic
+// JOURNAL DETAIL RATE RECTANGLES LOGIC
 
 rectangleContainer.forEach((img, index) =>{
   img.addEventListener("click", () => {
@@ -104,11 +106,13 @@ rectangleContainer.forEach((img, index) =>{
 })
 
 
-// Reset the formular on Journal Detail
+// RESET THE FORMULAR ON JOURNAL DETAIL
 
 detailSaveButton.addEventListener("click", () => {
   rateTodayForm.reset();
 })
+
+
 
 
 // FUNCTIONS
