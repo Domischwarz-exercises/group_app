@@ -38,9 +38,6 @@ const navigationList = getAll(".nav-bar > a")
 
 
 
-
-
-
 // NAV LOGIC
 navigationList.forEach((anchor, index) => {
   anchor.addEventListener("click", () => {
