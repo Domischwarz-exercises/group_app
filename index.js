@@ -20,11 +20,8 @@ const allBigBtns = getAll('.btn__big');
 const allMediumBtns = getAll('.btn__medium');
 const allSmallBtns = getAll('.btn__small');
 const allExtrasBtns = getAll('.btn__extrasmall')
-
 const starContainer = getAll(".journaldetail__starcontainer > img")
 const rectangleContainer = getAll(".journaldetail__rectanglecontainer > img")
-
-
 
 const navigation = [homeButton, buddyButton, teamButton, energyButton, journalButton, detailButton];
 const pagesList = [home, codeBuddy, team, energy, journal, detail];
@@ -98,35 +95,4 @@ function getAll (selector) {
 
 function get (selector) {
   return document.querySelector(selector);
-}
-
-function resetStars (){
-  starsList.forEach(star => star.src="img/starGrey.png");
-}
-
-function goBlueStar (one, two, three, four, five){
-  resetStars();
-  one.src="img/starBlue.png";
-  two.src="img/starBlue.png";
-  three.src="img/starBlue.png";
-  four.src="img/starBlue.png";
-  five.src="img/starBlue.png";
-}
-
-function resetRectangles (){
-  rectangleList.forEach(rectangle => rectangle.src="img/rectangleGrey.png");
-}
-
-function goBlueRectangle (one, two, three, four, five, six, seven, eight, nine, ten){
-  resetRectangles();
-  one.src="img/rectangleBlue.png";
-  two.src="img/rectangleBlue.png";
-  three.src="img/rectangleBlue.png";
-  four.src="img/rectangleBlue.png";
-  five.src="img/rectangleBlue.png";
-  six.src="img/rectangleBlue.png";
-  seven.src="img/rectangleBlue.png";
-  eight.src="img/rectangleBlue.png";
-  nine.src="img/rectangleBlue.png";
-  ten.src="img/rectangleBlue.png";
 }
