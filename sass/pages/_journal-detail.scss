@@ -26,14 +26,9 @@
     justify-content: space-between;
   }
 
-  &__star--imgblue {
+  &__star--img {
     width: 35.75px;
     height: 34.46px;
-  }
-
-  &__star--imggrey {
-    width: 36px;
-    height: 35px;
   }
 
   &__rectangletitle {
@@ -48,15 +43,10 @@
     justify-content: space-between;
   }
 
-  &__rectangle--imggrey {
+  &__rectangle--img {
     width: 22px;
     height: 22px;
     border-radius: 4px;
-  }
-
-  &__rectangle--imgblue {
-    width: 22px;
-    height: 22px;
   }
 
   &__mottotitle {
