@@ -121,3 +121,124 @@ function getAll (selector) {
 function get (selector) {
   return document.querySelector(selector);
 }
+
+///////////////
+//LOCALSTORAGE
+
+const form = document.querySelector('form');
+
+const localStorageListLoaded = loadFromStorageList('Motto and Notes')
+
+let localStorageList = localStorageListLoaded || [];
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const motto = form.motto.value;
+    const notes = form.notes.value;
+    addToStorageList(motto, notes);
+    form.reset()
+});
+
+
+function addToStorageList(motto, notes) {
+    const journalEntry = {motto: motto, notes: notes};
+    localStorageList = [...localStorageList, journalEntry];
+    saveToStorageList(localStorageList)
+}
+
+function saveToStorageList(input) {
+    localStorage.setItem('Motto and Notes', JSON.stringify(input));
+}
+
+function loadFromStorageList(name) {
+    try {
+     return JSON.parse(localStorage.getItem(name));
+   } catch(error) {
+     console.log(error.message);
+   }
+}
+
+
+///////////////////
+///CODE BUDDES API
+
+const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
+
+fetchAPI(codeBuddiesAPI, codeBuddiesSection)
+
+async function fetchAPI(http, htmlCreator) {
+  try {
+    const result = await fetch(http);
+    const data = await result.json();
+    data.forEach(pair => htmlCreator(pair));
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+function codeBuddiesSection (inputAPI) {
+  const elDiv = createContainer('.buddies__container')
+
+  inputAPI.forEach(function forEachPerson(input, i) {
+    switch (true) {
+    case (i === 0) :
+      elDiv.innerHTML += `
+          <div class="buddy__content one bookmark">
+            <h3 class="heading-3">${input}</h3>
+          </div>`;
+      break;
+    default :
+      elDiv.innerHTML += `
+          <div class="buddy__content two bookmark">
+            <h3 class="heading-3">${input}</h3>
+          </div>`;
+    }
+  });
+}
+
+/////////////////////////////
+//CODE TEAMS
+
+const teamsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/teams'
+
+fetchAPI(teamsAPI, teamsSection)
+
+function teamsSection (inputAPI) {
+  const elDiv = createContainer('.teams__container')
+
+  inputAPI.forEach(function forEachPerson(input, i) {
+    switch (true) {
+      case (i === 0): 
+        elDiv.innerHTML += `
+            <div class="buddy__content one bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div> `;
+        break;
+      case (i === 1): 
+        elDiv.innerHTML += `
+            <div class="buddy__content b-style bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div> `;
+        break;
+      default:
+        elDiv.innerHTML += `
+            <div class="buddy__content two bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div> `;
+      }
+    })
+}
+
+function create(input) {
+  return document.createElement(input)
+}
+
+function createContainer(target) {
+  const element = get(target);
+  const elDiv = create('div');
+  element.appendChild(elDiv);
+  elDiv.classList.add('buddy');
+
+  return elDiv
+}
+//<h2 class="buddy__content--title heading-2">Team ${counter}</h2>
