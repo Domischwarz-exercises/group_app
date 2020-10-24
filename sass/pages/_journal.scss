@@ -35,13 +35,7 @@
     justify-content: space-between;
   }
 
-  &__star--imgblue {
-    width: 25px;
-    height: 24px;
-    padding-right: 10px;
-  }
-
-  &__star--imggrey {
+  &__star--img {
     width: 25px;
     height: 24px;
     padding-right: 10px;
@@ -61,12 +55,7 @@
     justify-content: space-between;
   }
 
-  &__rectangle--imgblue {
-    width: 22px;
-    height: 22px;
-  }
-
-  &__rectangle--imggrey {
+  &__rectangle--img {
     width: 22px;
     height: 22px;
   }

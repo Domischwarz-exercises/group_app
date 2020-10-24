@@ -299,12 +299,9 @@ main {
     padding-right: 39.25px;
     display: flex;
     justify-content: space-between; }
-  .journaldetail__star--imgblue {
+  .journaldetail__star--img {
     width: 35.75px;
     height: 34.46px; }
-  .journaldetail__star--imggrey {
-    width: 36px;
-    height: 35px; }
   .journaldetail__rectangletitle {
     width: 112px;
     height: 16px;
@@ -313,13 +310,10 @@ main {
     margin-bottom: 18px;
     display: flex;
     justify-content: space-between; }
-  .journaldetail__rectangle--imggrey {
+  .journaldetail__rectangle--img {
     width: 22px;
     height: 22px;
     border-radius: 4px; }
-  .journaldetail__rectangle--imgblue {
-    width: 22px;
-    height: 22px; }
   .journaldetail__mottotitle {
     width: 45px;
     height: 16px;
@@ -414,11 +408,7 @@ justify-content:
     grid-column: span 7;
     display: flex;
     justify-content: space-between; }
-  .card__star--imgblue {
-    width: 25px;
-    height: 24px;
-    padding-right: 10px; }
-  .card__star--imggrey {
+  .card__star--img {
     width: 25px;
     height: 24px;
     padding-right: 10px; }
@@ -432,10 +422,7 @@ justify-content:
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between; }
-  .card__rectangle--imgblue {
-    width: 22px;
-    height: 22px; }
-  .card__rectangle--imggrey {
+  .card__rectangle--img {
     width: 22px;
     height: 22px; }
   .card__mottotitle {
