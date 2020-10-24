@@ -15,6 +15,7 @@ const energyButton = get('.energy-btn');
 const journalButton = get('.journal-btn');
 const detailButton = get('.detail-btn');
 const detailSaveButton = get(".journaldetail__savebutton")
+const headTitle = get(".head__title")
 
 const allBigBtns = getAll('.btn__big');
 const allMediumBtns = getAll('.btn__medium');
@@ -22,6 +23,8 @@ const allSmallBtns = getAll('.btn__small');
 const allExtrasBtns = getAll('.btn__extrasmall')
 const starContainer = getAll(".journaldetail__starcontainer > img")
 const rectangleContainer = getAll(".journaldetail__rectanglecontainer > img")
+const navigationList = getAll(".nav-bar > a")
+
 
 const navigation = [homeButton, buddyButton, teamButton, energyButton, journalButton, detailButton];
 const pagesList = [home, codeBuddy, team, energy, journal, detail];
@@ -31,36 +34,29 @@ detailSaveButton.addEventListener("click", () => {
 })
 
 
-// Button
-homeButton.addEventListener('click', () => {
-  resetPages(pagesList);
-  home.classList.remove('hidden');
-  document.querySelector('.head__title').innerText = 'Dashboard';
-});
 
-buddyButton.addEventListener('click', () => {
-  resetPages(pagesList);
-  codeBuddy.classList.remove('hidden');
-  document.querySelector('.head__title').innerText = 'Code Buddy';
-});
+navigationList.forEach((anchor, index) => {
+  anchor.addEventListener("click", () => {
+    resetPages(pagesList);
+    if(index === 0){
+      home.classList.remove("hidden");
+      headTitle.innerText="Dashboard";
+    }else if(index === 1){
+      codeBuddy.classList.remove("hidden");
+      headTitle.innerText="Code Buddy"
+    }else if(index === 2){
+      team.classList.remove("hidden");
+      headTitle.innerText="Teams"
+    }else if(index === 3){
+      energy.classList.remove("hidden");
+      headTitle.innerText="Energy"
+    }else if(index === 4){
+      journal.classList.remove("hidden");
+      headTitle.innerText="Journal"
+    }
+  })
+})
 
-teamButton.addEventListener('click', () => {
-  resetPages(pagesList);
-  team.classList.remove('hidden');
-  document.querySelector('.head__title').innerText = 'Teams';
-});
-
-energyButton.addEventListener('click', () => {
-  resetPages(pagesList);
-  energy.classList.remove('hidden');
-  document.querySelector('.head__title').innerText = 'Energy';
-});
-
-journalButton.addEventListener('click', () => {
-  resetPages(pagesList);
-  journal.classList.remove('hidden');
-  document.querySelector('.head__title').innerText = 'Journal';
-});
 
 detailButton.addEventListener('click', () => {
   resetPages(pagesList);
