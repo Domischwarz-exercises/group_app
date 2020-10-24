@@ -125,10 +125,7 @@ async function fetchAPI(http, htmlCreator) {
 }
 
 function codeBuddiesSection (inputAPI) {
-  const sectionBuddy = get('.buddies__container');
-  const elDiv = document.createElement('div');
-  sectionBuddy.appendChild(elDiv);
-  elDiv.classList.add("buddy");
+  const elDiv = createContainer('.buddies__container')
 
   inputAPI.forEach(function forEachPerson(input, i) {
     switch (true) {
@@ -155,10 +152,7 @@ const teamsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/teams'
 fetchAPI(teamsAPI, teamsSection)
 
 function teamsSection (inputAPI) {
-  const sectionTeam = get('.teams__container');
-  const elDiv = create('div');
-  sectionTeam.appendChild(elDiv);
-  elDiv.classList.add("buddy");
+  const elDiv = createContainer('.teams__container')
 
   inputAPI.forEach(function forEachPerson(input, i) {
     switch (true) {
@@ -185,5 +179,14 @@ function teamsSection (inputAPI) {
 
 function create(input) {
   return document.createElement(input)
+}
+
+function createContainer(target) {
+  const element = get(target);
+  const elDiv = create('div');
+  element.appendChild(elDiv);
+  elDiv.classList.add('buddy');
+
+  return elDiv
 }
 //<h2 class="buddy__content--title heading-2">Team ${counter}</h2>
