@@ -19,94 +19,19 @@ const allMediumBtns = getAll('.btn__medium');
 const allSmallBtns = getAll('.btn__small');
 const allExtrasBtns = getAll('.btn__extrasmall')
 
-const starOne = get(".card__starone");
-const starTwo = get(".card__startwo");
-const starThree = get(".card__starthree");
-const starFour = get(".card__starfour");
-const starFive = get(".card__starfive");
-const rateTodayForm = get(".journaldetail");
-const saveButton = get(".journaldetail__savebutton");
+const starContainer = document.querySelectorAll(".journaldetail__starcontainer > img")
+const rectangleContainer = document.querySelectorAll("journaldetail__rectanglecontainer > img")
 
-const rectangleOne = get(".card__rectangleone")
-const rectangleTwo = get(".card__rectangletwo")
-const rectangleThree = get(".card__rectanglethree")
-const rectangleFour = get(".card__rectanglefour")
-const rectangleFive = get(".card__rectanglefive")
-const rectangleSix = get(".card__rectanglesix")
-const rectangleSeven = get(".card__rectangleseven")
-const rectangleEight = get(".card__rectangleeight")
-const rectangleNine = get(".card__rectanglenine")
-const rectangleTen = get(".card__rectangleten")
+
 
 const navigation = [homeButton, buddyButton, teamButton, energyButton, journalButton, detailButton];
 const pagesList = [home, codeBuddy, team, energy, journal, detail];
-const starsList = [starOne, starTwo, starThree, starFour, starFive];
-const rectangleList = [rectangleOne, rectangleTwo, rectangleThree, rectangleFour, rectangleFive, rectangleSix, rectangleSeven, rectangleEight, rectangleNine, rectangleTen];
-
+/*
 saveButton.addEventListener("click", () => {
   rateTodayForm.reset();
-})
+})*/
 
-starOne.addEventListener("click", () => {
-  goBlueStar(starOne);
-})
 
-starTwo.addEventListener("click", () => {
-  goBlueStar(starOne, starTwo);
-})
-
-starThree.addEventListener("click", () => {
-  goBlueStar(starOne, starTwo, starThree);
-})
-
-starFour.addEventListener("click", () => {
-  goBlueStar(starOne, starTwo, starThree, starFour);
-})
-
-starFive.addEventListener("click", () => {
-  goBlueStar(starOne, starTwo, starThree, starFour, starFive);
-})
-
-// Rectangle
-rectangleList[0].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0]);
-})
-
-rectangleList[1].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1]);
-})
-
-rectangleList[2].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2]);
-})
-
-rectangleList[3].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3]);
-})
-
-rectangleList[4].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4]);
-})
-
-rectangleList[5].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5]);
-})
-
-rectangleList[6].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6]);
-})
-
-rectangleList[7].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6], rectangleList[7]);
-})
-
-rectangleList[8].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6], rectangleList[7], rectangleList[8]);
-})
-
-rectangleList[9].addEventListener("click", () => {
-  goBlueRectangle(rectangleList[0], rectangleList[1],rectangleList[2], rectangleList[3], rectangleList[4], rectangleList[5], rectangleList[6], rectangleList[7], rectangleList[8], rectangleList[9]);
-})
 
 
 // Button
@@ -145,6 +70,23 @@ detailButton.addEventListener('click', () => {
   detail.classList.remove('hidden');
 })
 
+starContainer.forEach((img, index) =>{
+  img.addEventListener("click", () => {
+    starContainer.forEach(star => star.src = "img/starGrey.png");
+    for (let i = 0; i <= index; i++){
+      starContainer[i].src="img/starBlue.png"; 
+    }
+  })
+})
+
+rectangleContainer.forEach((img, index) =>{
+  img.addEventListener("click", () => {
+    rectangleContainer.forEach(rectangle => rectangle.src = "img/rectangleGrey.png");
+    for (let i = 0; i <= index; i++){
+      rectangleContainer[i].src="img/rectangleBlue.png"; 
+    }
+  })
+})
 
 function resetPages(pages) {
   return pages.forEach(page => page.classList.add('hidden'));
