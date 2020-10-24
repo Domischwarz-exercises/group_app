@@ -37,7 +37,6 @@ const rectangleContainer = getAll(".journaldetail__rectanglecontainer > img")
 const navigationList = getAll(".nav-bar > a")
 
 
-
 // NAV LOGIC
 navigationList.forEach((anchor, index) => {
   anchor.addEventListener("click", () => {
@@ -108,8 +107,6 @@ rectangleContainer.forEach((img, index) =>{
 detailSaveButton.addEventListener("click", () => {
   rateTodayForm.reset();
 })
-
-
 
 
 // FUNCTIONS
