@@ -30,9 +30,8 @@ const allBigBtns = getAll('.btn__big');
 const allMediumBtns = getAll('.btn__medium');
 const allSmallBtns = getAll('.btn__small');
 const allExtrasBtns = getAll('.btn__extrasmall')
+
 const starContainer = getAll(".journaldetail__starcontainer > img")
-
-
 const rectangleContainer = getAll(".journaldetail__rectanglecontainer > img")
 const navigationList = getAll(".nav-bar > a")
 
