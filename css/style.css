@@ -57,10 +57,10 @@ main {
     transform: translate(-50%, -50%); }
   main .buddy-imagedash {
     position: absolute;
-    top: 57%;
+    top: 50%;
     left: 50%;
     /* bring your own prefixes */
-    transform: translate(-50%); }
+    transform: translate(-50%, -50%); }
   main .one {
     border: 1px solid #E0E4E8;
     border-radius: .6rem .6rem 0 0;

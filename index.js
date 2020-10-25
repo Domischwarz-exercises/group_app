@@ -183,13 +183,16 @@ function codeBuddiesSection (inputAPI) {
       elDiv.innerHTML += `
           <div class="buddy__content one bookmark">
             <h3 class="heading-3">${input}</h3>
-          </div>`;
+          </div>
+          <img class="buddy-imagedash" src="/img/Plus.svg" alt="" />
+          `;
       break;
     default :
       elDiv.innerHTML += `
           <div class="buddy__content two bookmark">
             <h3 class="heading-3">${input}</h3>
-          </div>`;
+          </div>
+          `;
     }
   });
 }
@@ -203,7 +206,7 @@ fetchAPI(teamsAPI, teamsSection)
 
 function teamsSection (inputAPI) {
   const elDiv = createContainer('.teams__container')
-
+  //elDiv.innerHTML += `<h2 class="buddy__content--title heading-2">Team ${i}</h2>`
   inputAPI.forEach(function forEachPerson(input, i) {
     
     switch (true) {
@@ -237,7 +240,7 @@ function createContainer(target) {
   const elDiv = create('div');
   element.appendChild(elDiv);
   elDiv.classList.add('buddy');
-
+  
   return elDiv
 }
-//<h2 class="buddy__content--title heading-2">Team ${counter}</h2>
+//
