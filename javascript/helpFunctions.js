@@ -1,4 +1,4 @@
-import get from './index'
+import get from '../index'
 
 export default function createContainer(target, className) {
     const element = get(target);

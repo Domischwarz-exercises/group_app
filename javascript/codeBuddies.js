@@ -1,6 +1,5 @@
 ///////////////////
 ///CODE BUDDES API
-const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
 
 export default function codeBuddiesSection (inputAPI) {
   const elDiv = createContainer('.buddies__container', 'buddy')
