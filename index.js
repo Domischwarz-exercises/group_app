@@ -76,7 +76,6 @@ detailButton.addEventListener('click', () => {
   detail.classList.remove('hidden');
 })
 
-
 // JOURNAL DETAIL RATE STARS LOGIC
 
 starContainer.forEach((img, index) =>{
@@ -109,7 +108,6 @@ detailSaveButton.addEventListener("click", () => {
 
 
 // FUNCTIONS
-
 function resetPages(pages) {
   return pages.forEach(page => page.classList.add('hidden'));
 }
@@ -207,6 +205,7 @@ function teamsSection (inputAPI) {
   const elDiv = createContainer('.teams__container')
 
   inputAPI.forEach(function forEachPerson(input, i) {
+    
     switch (true) {
       case (i === 0): 
         elDiv.innerHTML += `
