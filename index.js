@@ -164,19 +164,22 @@ const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
 
 fetchAPI(codeBuddiesAPI, codeBuddiesSection)
 
+//fetching API
 async function fetchAPI(http, htmlCreator) {
   try {
     const result = await fetch(http);
     const data = await result.json();
-    data.forEach(pair => htmlCreator(pair));
+    data.forEach((pair, index) => htmlCreator(pair, index));
   } catch (error) {
     console.error(error.message);
   }
 }
 
-function codeBuddiesSection (inputAPI) {
-  const elDiv = createContainer('.buddies__container')
 
+function codeBuddiesSection (inputAPI) {
+  const elDiv = createContainer('.buddies__container', 'buddy')
+
+  //creating HTML structure for buddies
   inputAPI.forEach(function forEachPerson(input, i) {
     switch (true) {
     case (i === 0) :
@@ -204,46 +207,191 @@ const teamsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/teams'
 
 fetchAPI(teamsAPI, teamsSection)
 
-function teamsSection (inputAPI) {
-  const elDiv = createContainer('.teams__container')
-  console.log(inputAPI.value)
-  //elDiv.innerHTML += `<h2 class="buddy__content--title heading-2">Team ${inputAPI.indexOf(inputAPI)}</h2>`
+function teamsSection (inputAPI, index) {
+  const elDiv = createContainer('.teams__container', 'buddy')
+  elDiv.innerHTML += `<h2 class="buddy__content--title heading-2">Team ${index+1}</h2>`
   
+  //creating HTML for teams 
   inputAPI.forEach(function forEachPerson(input, i) {
-    elDiv.innerHTML += `<h2 class="buddy__content--title heading-2">Team ${inputAPI.indexOf(input)}</h2>`
-    console.log(input)
     switch (true) {
       case (i === 0): 
         elDiv.innerHTML += `
             <div class="buddy__content one bookmark">
               <h3 class="heading-3">${input}</h3>
-            </div> `;
+            </div>`;
         break;
-      case (i === 1): 
-        elDiv.innerHTML += `
-            <div class="buddy__content b-style bookmark">
-              <h3 class="heading-3">${input}</h3>
-            </div> `;
-        break;
-      default:
+      case (i === inputAPI.length-1): 
         elDiv.innerHTML += `
             <div class="buddy__content two bookmark">
               <h3 class="heading-3">${input}</h3>
-            </div> `;
+            </div>`;
+        break;
+      default:
+        elDiv.innerHTML += `
+            <div class="buddy__content b-style bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div>`;
       }
     })
 }
 
-function create(input) {
-  return document.createElement(input)
+
+///////////////////
+///JOURNALS API
+
+const journalsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/journals'
+
+fetchAPI(journalsAPI, journalsSection)
+
+function journalsSection(inputAPI, index) {
+  const elDiv = createContainer('.journal__container', 'card')
+  elDiv.innerHTML += `
+  <h3 class="card__date card-grid">YESTERDAY</h3>
+  <h4 class="card__startitle card-grid card-title">Rating:</h4>
+  <div class="card__starcontainer">
+  <img class="card__star--img test" alt="Black star"/>
+  <img class="card__star--img test" alt="Black star"/>
+  <img class="card__star--img test" alt="Black star"/>
+  <img class="card__star--img test" alt="Black star"/>
+  <img class="card__star--img test" alt="Black star"/>
+  `
+
+  const stars = getAll('.test')
+  starContainer.forEach(star => starBlue(star, inputAPI));
+
+  function starBlue(images, apiInput) {
+    images.src = "img/starGrey.png";
+    console.log(images)
+    for (let i = 0; i <= apiInput.rating; i++) {
+      console.log(apiInput.rating)
+      images[i].src = "img/starBlue.png"
+    }
+  }
 }
 
-function createContainer(target) {
+  
+  
+
+ /* starContainer.forEach((img, index) =>{
+    img.addEventListener("click", () => {
+      starContainer.forEach(star => star.src = "img/starGrey.png");
+      for (let i = 0; i <= index; i++){
+        starContainer[i].src="img/starBlue.png"; 
+      }
+    })
+  })*/
+
+
+
+  /*rectangleContainer.forEach(rectangle => rectangle.src = "img/rectangleGrey.png");
+    for (let i = 0; i <= index; i++){
+      rectangleContainer[i].src="img/rectangleBlue.png"; 
+    }
+  })*/
+
+  /*<div class="card">
+          <h3 class="card__date card-grid">YESTERDAY</h3>
+          <h4 class="card__startitle card-grid card-title">Rating:</h4>
+          <div class="card__starcontainer">
+            <img
+              class="card__star--imgblue test__one"
+              src="img/starBlue.png"
+              alt="Black star"
+            />
+            <img
+              class="card__star--imgblue"
+              src="img/starBlue.png"
+              alt="Black star"
+            />
+            <img
+              class="card__star--imgblue"
+              src="img/starBlue.png"
+              alt="Black star"
+            />
+            <img
+              class="card__star--imggrey"
+              src="img/starGrey.png"
+              alt="Grey star"
+            />
+            <img
+              class="card__star--imggrey"
+              src="img/starGrey.png"
+              alt="Grey star"
+            />
+          </div>
+
+          <h4 class="card__rectangletitle card-grid card-title">
+            Comprehension:
+          </h4>
+          <div class="card__rectanglecontainer card-grid">
+            <img
+              class="card__rectangle--imgblue"
+              src="img/rectangleBlue.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imgblue"
+              src="img/rectangleBlue.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imgblue"
+              src="img/rectangleBlue.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imgblue"
+              src="img/rectangleBlue.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imgblue"
+              src="img/rectangleBlue.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imgblue"
+              src="img/rectangleBlue.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imgblue"
+              src="img/rectangleBlue.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imggrey"
+              src="img/rectangleGrey.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imggrey"
+              src="img/rectangleGrey.png"
+              alt=""
+            />
+            <img
+              class="card__rectangle--imggrey"
+              src="img/rectangleGrey.png"
+              alt=""
+            />
+          </div>
+          <h4 class="card__mottotitle card-grid card-title">Motto:</h4>
+          <h3 class="card__motto card-grid">"Thats life in the city"</h3>
+          <h4 class="card__notetitle card-grid card-title">Notes:</h4>
+          <p class="card__note card-grid">
+            Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
+            mihi. Et quidem se repellere, idque instituit docere sic omne
+            animal, simul atque.
+          </p>
+        </div>*/
+
+
+//function html container creator
+function createContainer(target, className) {
   const element = get(target);
-  const elDiv = create('div');
+  const elDiv = document.createElement('div');
   element.appendChild(elDiv);
-  elDiv.classList.add('buddy');
+  elDiv.classList.add(className);
   
   return elDiv
 }
-//
