@@ -77,7 +77,6 @@ detailButton.addEventListener('click', () => {
   detail.classList.remove('hidden');
 })
 
-
 // RESET THE FORMULAR ON JOURNAL DETAIL
 
 detailSaveButton.addEventListener("click", () => {
@@ -101,7 +100,6 @@ detailCancelButton.addEventListener("click", () => {
   journal.classList.remove("hidden");
   headTitle.innerText="Journal"
 })
-
 
 // JOURNAL DETAIL RATE STARS LOGIC
 
@@ -128,7 +126,6 @@ rectangleContainer.forEach((img, index) =>{
 
 
 // FUNCTIONS
-
 function resetPages(pages) {
   return pages.forEach(page => page.classList.add('hidden'));
 }
@@ -185,32 +182,38 @@ const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
 
 fetchAPI(codeBuddiesAPI, codeBuddiesSection)
 
+//fetching API
 async function fetchAPI(http, htmlCreator) {
   try {
     const result = await fetch(http);
     const data = await result.json();
-    data.forEach(pair => htmlCreator(pair));
+    data.forEach((pair, index) => htmlCreator(pair, index));
   } catch (error) {
     console.error(error.message);
   }
 }
 
-function codeBuddiesSection (inputAPI) {
-  const elDiv = createContainer('.buddies__container')
 
+function codeBuddiesSection (inputAPI) {
+  const elDiv = createContainer('.buddies__container', 'buddy')
+
+  //creating HTML structure for buddies
   inputAPI.forEach(function forEachPerson(input, i) {
     switch (true) {
     case (i === 0) :
       elDiv.innerHTML += `
           <div class="buddy__content one bookmark">
             <h3 class="heading-3">${input}</h3>
-          </div>`;
+          </div>
+          <img class="buddy-imagedash" src="/img/Plus.svg" alt="" />
+          `;
       break;
     default :
       elDiv.innerHTML += `
           <div class="buddy__content two bookmark">
             <h3 class="heading-3">${input}</h3>
-          </div>`;
+          </div>
+          `;
     }
   });
 }
@@ -222,42 +225,83 @@ const teamsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/teams'
 
 fetchAPI(teamsAPI, teamsSection)
 
-function teamsSection (inputAPI) {
-  const elDiv = createContainer('.teams__container')
-
+function teamsSection (inputAPI, index) {
+  const elDiv = createContainer('.teams__container', 'buddy')
+  elDiv.innerHTML += `<h2 class="buddy__content--title heading-2">Team ${index+1}</h2>`
+  
+  //creating HTML for teams 
   inputAPI.forEach(function forEachPerson(input, i) {
     switch (true) {
       case (i === 0): 
         elDiv.innerHTML += `
             <div class="buddy__content one bookmark">
               <h3 class="heading-3">${input}</h3>
-            </div> `;
+            </div>`;
         break;
-      case (i === 1): 
-        elDiv.innerHTML += `
-            <div class="buddy__content b-style bookmark">
-              <h3 class="heading-3">${input}</h3>
-            </div> `;
-        break;
-      default:
+      case (i === inputAPI.length-1): 
         elDiv.innerHTML += `
             <div class="buddy__content two bookmark">
               <h3 class="heading-3">${input}</h3>
-            </div> `;
+            </div>`;
+        break;
+      default:
+        elDiv.innerHTML += `
+            <div class="buddy__content b-style bookmark">
+              <h3 class="heading-3">${input}</h3>
+            </div>`;
       }
     })
 }
 
-function create(input) {
-  return document.createElement(input)
+
+///////////////////
+///JOURNALS API
+
+const journalsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/journals'
+
+fetchAPI(journalsAPI, journalsSection)
+
+function journalsSection(inputAPI, index) {
+  const elDiv = createContainer('.journal__container', 'card')
+  elDiv.innerHTML += `
+  <h3 class="card__date card-grid">YESTERDAY</h3>
+  <h4 class="card__startitle card-grid card-title">Rating:</h4>
+  <div class="card__starcontainer">
+    <img class="card__star--img" src="img/starBlue.png" alt="Black star" />
+    <img class="card__star--img" src="img/starBlue.png" alt="Black star" />
+    
+    <img class="card__star--img" src="img/starBlue.png" alt="Black star" />
+    <img class="card__star--img" src="img/starGrey.png" alt="Grey star" />
+    <img class="card__star--img" src="img/starGrey.png" alt="Grey star" />
+  </div>
+
+<h4 class="card__rectangletitle card-grid card-title">Comprehension:</h4>
+<div class="card__rectanglecontainer card-grid ">
+  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleGrey.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleGrey.png" alt="" />
+  <img class="card__rectangle--img" src="img/rectangleGrey.png" alt="" />
+</div>
+<h4 class="card__mottotitle card-grid card-title">Motto:</h4>
+<h3 class="card__motto card-grid ">${inputAPI.motto}</h3>
+<h4 class="card__notetitle card-grid card-title">Notes:</h4>
+<p class="card__note card-grid ">${inputAPI.notes}
+</p>
+  `
 }
 
-function createContainer(target) {
+//function html container creator
+function createContainer(target, className) {
   const element = get(target);
-  const elDiv = create('div');
+  const elDiv = document.createElement('div');
   element.appendChild(elDiv);
-  elDiv.classList.add('buddy');
-
+  elDiv.classList.add(className);
+  
   return elDiv
 }
-//<h2 class="buddy__content--title heading-2">Team ${counter}</h2>
