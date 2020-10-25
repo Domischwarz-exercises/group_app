@@ -206,12 +206,14 @@ fetchAPI(teamsAPI, teamsSection)
 
 function teamsSection (inputAPI) {
   const elDiv = createContainer('.teams__container')
-  //elDiv.innerHTML += `<h2 class="buddy__content--title heading-2">Team ${i}</h2>`
+  
+  
   inputAPI.forEach(function forEachPerson(input, i) {
-    
+    console.log(inputAPI.length)
     switch (true) {
       case (i === 0): 
         elDiv.innerHTML += `
+            <h2 class="buddy__content--title heading-2">Team ${}</h2>
             <div class="buddy__content one bookmark">
               <h3 class="heading-3">${input}</h3>
             </div> `;
