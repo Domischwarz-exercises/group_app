@@ -1,5 +1,4 @@
-///////////////////
-///CODE BUDDES API
+import createContainer from './helpFunctions.js';
 
 export default function codeBuddiesSection (inputAPI) {
   const elDiv = createContainer('.buddies__container', 'buddy')

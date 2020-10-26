@@ -1,67 +1,65 @@
+import {fetchAPI, get, getAll, resetPages} from './javascript/helpFunctions.js';
+import addToStorageList from './javascript/localStorage.js';
+import codeBuddiesSection from './javascript/codeBuddies.js';
+
 /////////////////////////////////////////////
 // NAVIGATION SINGLE PAGE
+
 const home = get('.js-home');
 const codeBuddy = get('.js-buddy');
 const team = get('.js-team');
 const energy = get('.js-energy');
 const journal = get('.js-journal');
 const detail = get('.js-detail')
-// LIST OF EVERY SINGLE PAGE
+
+// list of every page
 const pagesList = getAll("body > section")
 
-// JOURNAL DETAIL FORMULAR
+// journal detail
 const rateTodayForm = get(".journaldetail")
 
-// HEAD-TITLE OF EVERY SINGLE PAGE
+// head title of each page
 const headTitle = get(".head__title")
-// NAV BUTTONS
-const homeButton = get('.home-btn');
-const buddyButton = get('.buddy-btn');
-const teamButton = get('.team-btn');
-const energyButton = get('.energy-btn');
-const journalButton = get('.journal-btn');
-// BUTTON TO JOURNAL DETAIL PAGE
+
+// button to journal detail page
 const detailButton = get('.detail-btn');
-// BUTTON TO SAVE FORMULAR
+
+// button to save form
 const detailSaveButton = get(".journaldetail__savebutton")
 const detailCancelButton = get(".journaldetail__cancelbutton")
 
-
-const allBigBtns = getAll('.btn__big');
-const allMediumBtns = getAll('.btn__medium');
-const allSmallBtns = getAll('.btn__small');
-const allExtrasBtns = getAll('.btn__extrasmall')
-
+//stars and rectangles
 const starContainer = getAll(".journaldetail__starcontainer > img")
 const rectangleContainer = getAll(".journaldetail__rectanglecontainer > img")
+//navbuttons
 const navigationList = getAll(".nav-bar > a")
 
 
-// NAV LOGIC
+// navigation logic
 navigationList.forEach((anchor, index) => {
   anchor.addEventListener("click", () => {
     resetPages(pagesList);
-    // GO TO HOME PAGE
+    // home page
     if(index === 0){
       home.classList.remove("hidden");
       headTitle.innerText="Dashboard";
     }
-    // GO TO CODE-BUDDY PAGE
+    // code buddy page
     else if(index === 1){
       codeBuddy.classList.remove("hidden");
       headTitle.innerText="Code Buddy"
     }
-    // GOT TO TEAM PAGE
+    // team page
     else if(index === 2){
       team.classList.remove("hidden");
       headTitle.innerText="Teams"
     }
-    // GOT TO ENERGY PAGE
+    // energy page
     else if(index === 3){
       energy.classList.remove("hidden");
       headTitle.innerText="Energy"
     }
-    // GOT TO JOURNAL PAGE
+    // journal page
     else if(index === 4){
       journal.classList.remove("hidden");
       headTitle.innerText="Journal"
@@ -125,27 +123,16 @@ rectangleContainer.forEach((img, index) =>{
 })
 
 
-// FUNCTIONS
-function resetPages(pages) {
-  return pages.forEach(page => page.classList.add('hidden'));
-}
+// RESET THE FORMULAR ON JOURNAL DETAIL
 
-function getAll (selector) {
-  return document.querySelectorAll(selector);
-}
-
-function get (selector) {
-  return document.querySelector(selector);
-}
+detailSaveButton.addEventListener("click", () => {
+  rateTodayForm.reset();
+})
 
 ///////////////
 //LOCALSTORAGE
 
 const form = document.querySelector('form');
-
-const localStorageListLoaded = loadFromStorageList('Motto and Notes')
-
-let localStorageList = localStorageListLoaded || [];
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -155,68 +142,12 @@ form.addEventListener('submit', (event) => {
     form.reset()
 });
 
-
-function addToStorageList(motto, notes) {
-    const journalEntry = {motto: motto, notes: notes};
-    localStorageList = [...localStorageList, journalEntry];
-    saveToStorageList(localStorageList)
-}
-
-function saveToStorageList(input) {
-    localStorage.setItem('Motto and Notes', JSON.stringify(input));
-}
-
-function loadFromStorageList(name) {
-    try {
-     return JSON.parse(localStorage.getItem(name));
-   } catch(error) {
-     console.log(error.message);
-   }
-}
-
-
 ///////////////////
 ///CODE BUDDES API
 
 const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
 
 fetchAPI(codeBuddiesAPI, codeBuddiesSection)
-
-//fetching API
-async function fetchAPI(http, htmlCreator) {
-  try {
-    const result = await fetch(http);
-    const data = await result.json();
-    data.forEach((pair, index) => htmlCreator(pair, index));
-  } catch (error) {
-    console.error(error.message);
-  }
-}
-
-
-function codeBuddiesSection (inputAPI) {
-  const elDiv = createContainer('.buddies__container', 'buddy')
-
-  //creating HTML structure for buddies
-  inputAPI.forEach(function forEachPerson(input, i) {
-    switch (true) {
-    case (i === 0) :
-      elDiv.innerHTML += `
-          <div class="buddy__content one bookmark">
-            <h3 class="heading-3">${input}</h3>
-          </div>
-          <img class="buddy-imagedash" src="/img/Plus.svg" alt="" />
-          `;
-      break;
-    default :
-      elDiv.innerHTML += `
-          <div class="buddy__content two bookmark">
-            <h3 class="heading-3">${input}</h3>
-          </div>
-          `;
-    }
-  });
-}
 
 /////////////////////////////
 //CODE TEAMS
