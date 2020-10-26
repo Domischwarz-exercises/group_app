@@ -1,4 +1,4 @@
-import {fetchAPI, get, getAll, resetPages} from './javascript/helpFunctions.js';
+import createContainer, {fetchAPI, get, getAll, resetPages} from './javascript/helpFunctions.js';
 import addToStorageList from './javascript/localStorage.js';
 import codeBuddiesSection from './javascript/codeBuddies.js';
 import teamsSection from './javascript/codeTeams.js';
@@ -151,7 +151,7 @@ const codeBuddiesAPI = 'https://muc-2020-w1-student-api.vercel.app/api/buddies'
 fetchAPI(codeBuddiesAPI, codeBuddiesSection)
 
 /////////////////////////////
-//CODE TEAMS
+//CODE TEAMS API
 
 const teamsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/teams'
 
@@ -166,45 +166,51 @@ fetchAPI(journalsAPI, journalsSection)
 
 function journalsSection(inputAPI, index) {
   const elDiv = createContainer('.journal__container', 'card')
+  const stars = ratingIcons(5, starHTML)
+  const rectangles = ratingIcons(10, rectangleHTML)
   elDiv.innerHTML += `
-  <h3 class="card__date card-grid">YESTERDAY</h3>
-  <h4 class="card__startitle card-grid card-title">Rating:</h4>
-  <div class="card__starcontainer">
-    <img class="card__star--img" src="img/starBlue.png" alt="Black star" />
+    <h3 class="card__date card-grid">YESTERDAY</h3>
+    <h4 class="card__startitle card-grid card-title">Rating:</h4>
+    <div class="card__starcontainer">
+      ${stars}
+    </div>
+    <h4 class="card__rectangletitle card-grid card-title">Comprehension:</h4>
+    <div class="card__rectanglecontainer card-grid ">
+    ${rectangles}
+    </div>
+    <h4 class="card__mottotitle card-grid card-title">Motto:</h4>
+    <h3 class="card__motto card-grid ">${inputAPI.motto}</h3>
+    <h4 class="card__notetitle card-grid card-title">Notes:</h4>
+    <p class="card__note card-grid ">${inputAPI.notes}
+    </p>
+  `
+}
+
+const starHTML = '<img class="card__star--img" src="img/starBlue.png" alt="Black star" />'
+const rectangleHTML = '<img class="card__rectangle--img" src="img/rectangleGrey.png" alt="" />'
+
+function ratingIcons(amount, icon) {
+  let returnValue = '';
+  for (let i = 0; i < amount; i++) {
+    returnValue+= icon
+  }
+  return returnValue
+}
+
+/*
+<img class="card__star--img" src="img/starBlue.png" alt="Black star" />
     <img class="card__star--img" src="img/starBlue.png" alt="Black star" />
     
     <img class="card__star--img" src="img/starBlue.png" alt="Black star" />
     <img class="card__star--img" src="img/starGrey.png" alt="Grey star" />
-    <img class="card__star--img" src="img/starGrey.png" alt="Grey star" />
-  </div>
-
-<h4 class="card__rectangletitle card-grid card-title">Comprehension:</h4>
-<div class="card__rectanglecontainer card-grid ">
-  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleBlue.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleGrey.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleGrey.png" alt="" />
-  <img class="card__rectangle--img" src="img/rectangleGrey.png" alt="" />
-</div>
-<h4 class="card__mottotitle card-grid card-title">Motto:</h4>
-<h3 class="card__motto card-grid ">${inputAPI.motto}</h3>
-<h4 class="card__notetitle card-grid card-title">Notes:</h4>
-<p class="card__note card-grid ">${inputAPI.notes}
-</p>
-  `
-}
+    <img class="card__star--img" src="img/starGrey.png" alt="Grey star" />*/
 
 //function html container creator
-function createContainer(target, className) {
+/*function createContainer(target, className) {
   const element = get(target);
   const elDiv = document.createElement('div');
   element.appendChild(elDiv);
   elDiv.classList.add(className);
   
   return elDiv
-}
+}*/
