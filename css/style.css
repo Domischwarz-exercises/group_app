@@ -36,7 +36,8 @@ span {
 main {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 15%; }
   main .buddy {
     margin: 2rem 0;
     position: relative; }
@@ -51,7 +52,7 @@ main {
       margin-bottom: 2rem; }
   main .buddy-image {
     position: absolute;
-    top: 50%;
+    top: 64%;
     left: 50%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%); }
