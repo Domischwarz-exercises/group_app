@@ -1,4 +1,3 @@
-//import {get} from '../index.js'
 
 export default function createContainer(target, className) {
     const element = get(target);

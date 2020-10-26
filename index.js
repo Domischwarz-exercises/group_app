@@ -1,6 +1,7 @@
 import {fetchAPI, get, getAll, resetPages} from './javascript/helpFunctions.js';
 import addToStorageList from './javascript/localStorage.js';
 import codeBuddiesSection from './javascript/codeBuddies.js';
+import teamsSection from './javascript/codeTeams.js';
 
 /////////////////////////////////////////////
 // NAVIGATION SINGLE PAGE
@@ -155,35 +156,6 @@ fetchAPI(codeBuddiesAPI, codeBuddiesSection)
 const teamsAPI = 'https://muc-2020-w1-student-api.vercel.app/api/teams'
 
 fetchAPI(teamsAPI, teamsSection)
-
-function teamsSection (inputAPI, index) {
-  const elDiv = createContainer('.teams__container', 'buddy')
-  elDiv.innerHTML += `<h2 class="buddy__content--title heading-2">Team ${index+1}</h2>`
-  
-  //creating HTML for teams 
-  inputAPI.forEach(function forEachPerson(input, i) {
-    switch (true) {
-      case (i === 0): 
-        elDiv.innerHTML += `
-            <div class="buddy__content one bookmark">
-              <h3 class="heading-3">${input}</h3>
-            </div>`;
-        break;
-      case (i === inputAPI.length-1): 
-        elDiv.innerHTML += `
-            <div class="buddy__content two bookmark">
-              <h3 class="heading-3">${input}</h3>
-            </div>`;
-        break;
-      default:
-        elDiv.innerHTML += `
-            <div class="buddy__content b-style bookmark">
-              <h3 class="heading-3">${input}</h3>
-            </div>`;
-      }
-    })
-}
-
 
 ///////////////////
 ///JOURNALS API
